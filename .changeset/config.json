@@ -1,0 +1,28 @@
+{
+	"$schema": "https://unpkg.com/@changesets/config@3.1.1/schema.json",
+	"changelog": "@changesets/cli/changelog",
+	"commit": false,
+	"fixed": [
+		[
+			"@vuecalendar/calendar-controls",
+			"@vuecalendar/copy-event",
+			"@vuecalendar/core",
+			"@vuecalendar/current-time",
+			"@vuecalendar/drag-to-calendar",
+			"@vuecalendar/event-modal",
+			"@vuecalendar/event-recurrence",
+			"@vuecalendar/events-service",
+			"@vuecalendar/resource-scheduler",
+			"@vuecalendar/shared",
+			"@vuecalendar/zoom"
+		]
+	],
+	"linked": [],
+	"access": "restricted",
+	"baseBranch": "master",
+	"updateInternalDependencies": "patch",
+	"ignore": [
+		"@vuecalendar/docs"
+	]
+}
+

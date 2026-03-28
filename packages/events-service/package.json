@@ -1,0 +1,20 @@
+{
+  "name": "@vuecalendar/events-service",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Events service plugin for @vuecalendar/core",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "files": [
+    "src"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "peerDependencies": {
+    "@vuecalendar/core": "*"
+  },
+  "license": "MIT"
+}
