@@ -1,0 +1,318 @@
+.vuecalendar {
+	display: flex;
+	overflow: hidden;
+	background: var(--ht-bg);
+	height: var(--ht-calendar-height, calc(100vh - 210px));
+	font-family: inherit;
+	font-size: var(--ht-font-size);
+	color: var(--ht-text-900);
+}
+
+.vuecalendar__sidebar {
+	width: var(--ht-sidebar-width);
+	flex-shrink: 0;
+	border-right: 1px solid var(--ht-border);
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	padding: 12px 10px;
+	overflow-y: auto;
+	background: var(--ht-bg);
+}
+
+.vuecalendar__sidebar-actions {
+	display: flex;
+	justify-content: flex-end;
+	padding: 0 2px 2px;
+}
+
+.vuecalendar__sidebar-action {
+	border: none;
+	background: none;
+	padding: 4px 6px;
+	font-size: 11px;
+	font-weight: 600;
+	color: var(--ht-text-500);
+	cursor: pointer;
+	font-family: inherit;
+}
+
+.vuecalendar__sidebar-action:hover {
+	color: var(--ht-text-900);
+}
+
+.vuecalendar__sidebar-list {
+	display: flex;
+	flex-direction: column;
+	gap: 3px;
+}
+
+.vuecalendar__sidebar-item {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	min-height: 34px;
+	padding: 6px 8px;
+	border: 1px solid transparent;
+	border-left-width: 4px;
+	border-radius: 4px;
+	cursor: pointer;
+	font-size: var(--ht-font-size);
+	user-select: none;
+	transition:
+		background 0.14s ease,
+		color 0.14s ease,
+		border-color 0.14s ease;
+	color: var(--ht-text-600);
+	position: relative;
+	background: transparent;
+	border-left-color: transparent;
+}
+
+.vuecalendar__sidebar-item--draggable {
+	cursor: grab;
+}
+
+.vuecalendar__sidebar-item--hidden {
+	opacity: 0.58;
+}
+
+.vuecalendar__sidebar-item:hover:not(.vuecalendar__sidebar-item--active) {
+	background: var(--ht-bg-hover);
+	color: var(--ht-text-900);
+}
+
+.vuecalendar__sidebar-item--active {
+	font-weight: 600;
+	border-color: rgba(17, 24, 39, 0.06);
+	border-left-color: var(--ht-sidebar-accent, var(--ht-color-primary));
+	background: color-mix(in srgb, var(--ht-sidebar-container, var(--ht-color-primary-bg)) 78%, white);
+}
+
+.vuecalendar__sidebar-dot {
+	width: 9px;
+	height: 9px;
+	border-radius: 50%;
+	flex-shrink: 0;
+}
+
+.vuecalendar__sidebar-label {
+	flex: 1;
+	min-width: 0;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	line-height: 1.25;
+}
+
+.vuecalendar__sidebar-visibility {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 22px;
+	height: 22px;
+	border: none;
+	background: transparent;
+	color: currentColor;
+	opacity: 0.74;
+	cursor: pointer;
+	padding: 0;
+	flex-shrink: 0;
+}
+
+.vuecalendar__sidebar-visibility:hover {
+	opacity: 1;
+}
+
+.vuecalendar__sidebar-visibility svg {
+	width: 14px;
+	height: 14px;
+	display: block;
+}
+
+.vuecalendar__sidebar-hint {
+	font-size: 11px;
+	color: var(--ht-text-400);
+	line-height: 1.5;
+	display: flex;
+	align-items: flex-start;
+	gap: 6px;
+	padding: 4px 8px 0;
+}
+
+.vuecalendar__hint-icon {
+	width: 11px;
+	height: 11px;
+	flex-shrink: 0;
+	margin-top: 2px;
+	color: var(--ht-text-400);
+}
+
+.vuecalendar__main {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	min-width: 0;
+	position: relative;
+}
+
+.vuecalendar__nav {
+	display: flex;
+	align-items: center;
+	gap: 4px;
+	padding: 8px 12px;
+	border-bottom: 1px solid var(--ht-border);
+	flex-shrink: 0;
+	flex-wrap: wrap;
+	position: relative;
+	z-index: 30;
+}
+
+.vuecalendar__nav-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	border: none;
+	background: none;
+	cursor: pointer;
+	padding: 5px 8px;
+	border-radius: var(--ht-radius-md);
+	font-size: var(--ht-font-size);
+	color: var(--ht-text-700);
+	transition: background 0.12s, color 0.12s;
+	line-height: 1;
+}
+
+.vuecalendar__nav-btn:hover {
+	background: var(--ht-bg-hover);
+}
+
+.vuecalendar__nav-btn svg {
+	width: 14px;
+	height: 14px;
+	display: block;
+}
+
+.vuecalendar__nav-btn--text {
+	font-weight: 500;
+}
+
+.vuecalendar__header-label {
+	font-weight: 600;
+	font-size: var(--ht-font-size);
+	margin-left: 4px;
+	margin-right: auto;
+	white-space: nowrap;
+	color: var(--ht-text-900);
+}
+
+.vuecalendar__nav-right {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.vuecalendar__view-select-wrap {
+	display: grid;
+	gap: 3px;
+}
+
+.vuecalendar__view-select-label {
+	font-size: 10px;
+	font-weight: 700;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	color: var(--ht-text-400);
+}
+
+.vuecalendar__view-select {
+	min-height: 32px;
+	padding: 0 28px 0 10px;
+	border: 1px solid var(--ht-border);
+	border-radius: var(--ht-radius-md);
+	background: var(--ht-bg);
+	color: var(--ht-text-900);
+	font-size: var(--ht-font-size);
+	font-family: inherit;
+	font-weight: 500;
+	cursor: pointer;
+}
+
+.vuecalendar__drag-ghost {
+	position: fixed;
+	pointer-events: none;
+	z-index: 9999;
+	border-radius: var(--ht-radius-md);
+	padding: 6px 10px;
+	font-size: 12px;
+	font-weight: 600;
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	user-select: none;
+	min-width: 80px;
+}
+
+.vuecalendar__drag-ghost-icon {
+	width: 11px;
+	height: 11px;
+	flex-shrink: 0;
+}
+
+.vuecalendar--mobile .vuecalendar__nav {
+	flex-wrap: nowrap;
+	align-items: center;
+	gap: 4px;
+}
+
+.vuecalendar--mobile .vuecalendar__header-label {
+	flex: 1 1 auto;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin: 0 0 0 2px;
+	order: 0;
+	font-size: 14px;
+	line-height: 1.1;
+	white-space: nowrap;
+}
+
+.vuecalendar--mobile .vuecalendar__nav-right {
+	margin-left: 0;
+	flex: 0 0 auto;
+}
+
+.vuecalendar--mobile .vuecalendar__view-select-wrap {
+	display: grid;
+}
+
+.vuecalendar--mobile .ht-dp__input {
+	border: none;
+	background: transparent;
+	padding: 0;
+	min-width: 0;
+	width: 32px;
+	height: 32px;
+	border-radius: var(--ht-radius-md);
+	justify-content: center;
+	color: var(--ht-text-700);
+}
+
+.vuecalendar--mobile .ht-dp__icon svg {
+	width: 13px;
+	height: 13px;
+}
+
+.vuecalendar--mobile .vuecalendar__nav-btn--text,
+.vuecalendar--mobile .vuecalendar__nav-btn:not(.vuecalendar__nav-btn--text) {
+	padding: 4px 5px;
+	font-size: 14px;
+}
+
+.vuecalendar--mobile .vuecalendar__view-select {
+	min-height: 30px;
+	padding: 0 24px 0 8px;
+	font-size: 14px;
+}
+

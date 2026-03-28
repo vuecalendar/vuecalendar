@@ -1,0 +1,21 @@
+{
+  "name": "@vuecalendar/event-recurrence",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Event recurrence plugin for @vuecalendar/core - expand recurring events using RRULE-style config",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "files": [
+    "src"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "peerDependencies": {
+    "@vuecalendar/core": "*",
+    "moment": "^2.30.1"
+  },
+  "license": "MIT"
+}

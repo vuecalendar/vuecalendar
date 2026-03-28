@@ -1,0 +1,169 @@
+.ht-event-modal__backdrop {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(15, 23, 42, 0.42);
+    backdrop-filter: blur(3px);
+    z-index: 9999;
+}
+
+.ht-event-modal {
+    width: min(100%, 520px);
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    box-shadow: 0 20px 60px rgba(15, 23, 42, 0.18);
+    overflow: hidden;
+}
+
+.ht-event-modal--movable {
+    position: relative;
+}
+
+.ht-event-modal--floating {
+    position: fixed;
+    margin: 0;
+}
+
+.ht-event-modal--movable .ht-event-modal__header {
+    cursor: move;
+    user-select: none;
+}
+
+.ht-event-modal--movable .ht-event-modal__icon-btn {
+    cursor: pointer;
+}
+
+.ht-event-modal__header,
+.ht-event-modal__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 14px 16px;
+}
+
+.ht-event-modal__header {
+    border-bottom: 1px solid #eef2f7;
+}
+
+.ht-event-modal__footer {
+    justify-content: flex-end;
+    border-top: 1px solid #eef2f7;
+}
+
+.ht-event-modal__eyebrow {
+    margin: 0 0 4px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #64748b;
+}
+
+.ht-event-modal__title {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #0f172a;
+}
+
+.ht-event-modal__body {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.ht-event-modal__grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.ht-event-modal__field {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.ht-event-modal__field span {
+    font-size: 11px;
+    font-weight: 600;
+    color: #334155;
+}
+
+.ht-event-modal__field input,
+.ht-event-modal__field select,
+.ht-event-modal__field textarea {
+    width: 100%;
+    border: 1px solid #cbd5e1;
+    background: #ffffff;
+    border-radius: 6px;
+    padding: 8px 10px;
+    font: inherit;
+    font-size: 12px;
+    line-height: 1.4;
+    color: #0f172a;
+    transition: border-color 0.14s ease, box-shadow 0.14s ease, background 0.14s ease;
+}
+
+.ht-event-modal__field input::placeholder,
+.ht-event-modal__field textarea::placeholder {
+    color: #94a3b8;
+}
+
+.ht-event-modal__field input:focus,
+.ht-event-modal__field select:focus,
+.ht-event-modal__field textarea:focus {
+    outline: none;
+    border-color: #94a3b8;
+    box-shadow: 0 0 0 3px rgba(148, 163, 184, 0.12);
+}
+
+.ht-event-modal__icon-btn,
+.ht-event-modal__btn {
+    border: 1px solid #dbe3ee;
+    background: #ffffff;
+    border-radius: 6px;
+    padding: 7px 10px;
+    font: inherit;
+    font-size: 11px;
+    font-weight: 600;
+    color: #334155;
+    cursor: pointer;
+}
+
+.ht-event-modal__btn--primary {
+    background: #111827;
+    color: #ffffff;
+    border-color: #111827;
+}
+
+.ht-event-modal__btn--danger {
+    color: #991b1b;
+    border-color: #fecaca;
+    background: #fef2f2;
+}
+
+.ht-event-modal__icon-btn:disabled,
+.ht-event-modal__btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+@media (max-width: 720px) {
+    .ht-event-modal__header,
+    .ht-event-modal__body,
+    .ht-event-modal__footer {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    .ht-event-modal__grid {
+        grid-template-columns: 1fr;
+    }
+}

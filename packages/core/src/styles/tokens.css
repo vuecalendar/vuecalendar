@@ -1,0 +1,83 @@
+/**
+ * VueCalendar - Design Tokens
+ * ============================================================
+ * Import this file once in your app entry to get the full
+ * default theme. Override any variable on :root {} or on a
+ * specific wrapper element to retheme without touching source.
+ *
+ * Usage:
+ *   import '@vuecalendar/core/tokens.css';
+ *
+ * Override example:
+ *   :root {
+ *     --ht-color-primary:    #7c3aed;   /* violet brand   *\/
+ *     --ht-color-primary-bg: #f5f3ff;
+ *     --ht-sidebar-width:    200px;
+ *   }
+ */
+
+:root {
+    --vuecalendar-color-primary:       #2563eb;
+    --vuecalendar-color-primary-bg:    #eff6ff;
+    --vuecalendar-color-primary-ring:  #bfdbfe;
+    --vuecalendar-color-primary-focus: #93c5fd;
+    --vuecalendar-color-danger:        #ef4444;
+    --vuecalendar-text-900:   #111827;
+    --vuecalendar-text-700:   #374151;
+    --vuecalendar-text-600:   #4b5563;
+    --vuecalendar-text-500:   #6b7280;
+    --vuecalendar-text-400:   #9ca3af;
+    --vuecalendar-text-300:   #d1d5db;
+    --vuecalendar-border:       #e5e7eb;
+    --vuecalendar-border-light: #f3f4f6;
+    --vuecalendar-bg:        #ffffff;
+    --vuecalendar-bg-subtle: #f9fafb;
+    --vuecalendar-bg-muted:  #fafafa;
+    --vuecalendar-bg-hover:  #f3f4f6;
+    --vuecalendar-sidebar-width:      160px;
+    --vuecalendar-calendar-height:    calc(100vh - 210px);
+    --vuecalendar-font-size:           13px;
+    --vuecalendar-radius-sm:            4px;
+    --vuecalendar-radius-md:            6px;
+    --vuecalendar-radius-lg:            8px;
+    --vuecalendar-radius-xl:           12px;
+    --vuecalendar-hour-height:      64px;
+    --vuecalendar-time-axis-width:  48px;
+    --vuecalendar-off-hours-bg:    rgba(0, 0, 0, 0.022);
+    --vuecalendar-weekend-bg:      rgba(0, 0, 0, 0.018);
+    --vuecalendar-half-grid-color: rgba(0, 0, 0, 0.040);
+    --vuecalendar-nav-duration:  0.18s;
+    --vuecalendar-nav-distance:  24px;
+
+    --ht-color-primary:       var(--vuecalendar-color-primary);
+    --ht-color-primary-bg:    var(--vuecalendar-color-primary-bg);
+    --ht-color-primary-ring:  var(--vuecalendar-color-primary-ring);
+    --ht-color-primary-focus: var(--vuecalendar-color-primary-focus);
+    --ht-color-danger:        var(--vuecalendar-color-danger);
+    --ht-text-900:   var(--vuecalendar-text-900);
+    --ht-text-700:   var(--vuecalendar-text-700);
+    --ht-text-600:   var(--vuecalendar-text-600);
+    --ht-text-500:   var(--vuecalendar-text-500);
+    --ht-text-400:   var(--vuecalendar-text-400);
+    --ht-text-300:   var(--vuecalendar-text-300);
+    --ht-border:       var(--vuecalendar-border);
+    --ht-border-light: var(--vuecalendar-border-light);
+    --ht-bg:        var(--vuecalendar-bg);
+    --ht-bg-subtle: var(--vuecalendar-bg-subtle);
+    --ht-bg-muted:  var(--vuecalendar-bg-muted);
+    --ht-bg-hover:  var(--vuecalendar-bg-hover);
+    --ht-sidebar-width:      var(--vuecalendar-sidebar-width);
+    --ht-calendar-height:    var(--vuecalendar-calendar-height);
+    --ht-font-size:           var(--vuecalendar-font-size);
+    --ht-radius-sm:            var(--vuecalendar-radius-sm);
+    --ht-radius-md:            var(--vuecalendar-radius-md);
+    --ht-radius-lg:            var(--vuecalendar-radius-lg);
+    --ht-radius-xl:           var(--vuecalendar-radius-xl);
+    --ht-hour-height:      var(--vuecalendar-hour-height);
+    --ht-time-axis-width:  var(--vuecalendar-time-axis-width);
+    --ht-off-hours-bg:    var(--vuecalendar-off-hours-bg);
+    --ht-weekend-bg:      var(--vuecalendar-weekend-bg);
+    --ht-half-grid-color: var(--vuecalendar-half-grid-color);
+    --ht-nav-duration:  var(--vuecalendar-nav-duration);
+    --ht-nav-distance:  var(--vuecalendar-nav-distance);
+}

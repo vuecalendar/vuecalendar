@@ -1,0 +1,296 @@
+.ht-week {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+}
+
+.ht-week__day-headers {
+    display: flex;
+    flex-shrink: 0;
+    border-bottom: 1px solid var(--ht-border);
+    background: var(--ht-bg);
+    z-index: 10;
+}
+
+.ht-week__day-header {
+    flex: 1;
+    text-align: center;
+    padding: 6px 0;
+    min-width: 0;
+}
+
+.ht-week__day-name {
+    font-size: 11px;
+    color: var(--ht-text-400);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.ht-week__day-num {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--ht-text-700);
+    margin: 2px auto 0;
+}
+
+.ht-week__day-num--today {
+    background: var(--ht-color-primary);
+    color: var(--ht-bg);
+}
+
+.ht-week__grid {
+    flex: 1;
+    overflow-y: auto;
+    position: relative;
+}
+
+.ht-week__multi-day {
+    flex-shrink: 0;
+    border-bottom: 1px solid var(--ht-border);
+    background: var(--ht-bg);
+    overflow: hidden;
+}
+
+.ht-week__multi-day-grid {
+    display: flex;
+    position: relative;
+    height: 100%;
+}
+
+.ht-week__multi-day-col {
+    flex: 1;
+    min-width: 0;
+    border-left: 1px solid var(--ht-border-light);
+}
+
+.ht-week__multi-day-col:first-child {
+    border-left: 0;
+}
+
+.ht-week__multi-day-event {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 0;
+    padding: 0 8px;
+    border: 0;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1;
+    font-family: inherit;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    box-shadow: inset 0 0 0 1px rgba(15, 23, 42, 0.04);
+    cursor: pointer;
+}
+
+.ht-week__multi-day-event--continues-left {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.ht-week__multi-day-event--continues-right {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.ht-week__multi-day-title {
+    display: block;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.ht-week__multi-day-copy {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    min-width: 0;
+    flex: 1;
+}
+
+.ht-week__multi-day-time {
+    flex-shrink: 0;
+    opacity: 0.8;
+    font-weight: 500;
+}
+
+.ht-week__multi-day-edge {
+    width: 0;
+    height: 0;
+    flex-shrink: 0;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+}
+
+.ht-week__multi-day-edge--left {
+    margin-right: 6px;
+    border-right: 7px solid rgba(255, 255, 255, 0.92);
+}
+
+.ht-week__multi-day-edge--right {
+    margin-left: 6px;
+    border-left: 7px solid rgba(255, 255, 255, 0.92);
+}
+
+.ht-week__grid--bounded {
+    overflow-y: hidden;
+}
+
+.ht-week__grid--scrollable-bounded {
+    overflow-y: auto;
+}
+
+.ht-week__grid--static {
+    overflow-y: hidden;
+}
+
+.ht-week__inner {
+    display: flex;
+    position: relative;
+}
+
+.ht-week__time-axis {
+    flex-shrink: 0;
+    position: relative;
+    user-select: none;
+}
+
+.ht-week__hour-label {
+    position: absolute;
+    right: 4px;
+    left: 0;
+    font-size: 11px;
+    color: var(--ht-text-400);
+    text-align: right;
+    line-height: 1;
+}
+
+.ht-week__col {
+    flex: 1;
+    position: relative;
+    border-left: 1px solid var(--ht-border-light);
+    min-width: 0;
+}
+
+.ht-week__grid-line {
+    position: absolute;
+    width: 100%;
+    border-top: 1px solid var(--ht-border-light);
+    pointer-events: none;
+}
+
+.ht-week__grid-line--half {
+    border-top: 1px dashed var(--ht-half-grid-color);
+}
+
+.ht-week__shade {
+    position: absolute;
+    width: 100%;
+    background: var(--ht-off-hours-bg);
+    pointer-events: none;
+}
+
+.ht-week__weekend-shade {
+    position: absolute;
+    inset: 0;
+    background: var(--ht-weekend-bg);
+    pointer-events: none;
+}
+
+.ht-week__events-layer {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.ht-week__event {
+    pointer-events: auto;
+}
+
+.ht-week__drag-origin {
+    position: absolute;
+    left: 2px;
+    right: 2px;
+    border-radius: var(--ht-radius-sm);
+    border: 2px dashed #d1d5db;
+    background: transparent;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.ht-week__ghost {
+    position: absolute;
+    left: 2px;
+    right: 2px;
+    border-radius: var(--ht-radius-sm);
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.ht-week__ghost--sidebar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 4px 6px;
+}
+
+.ht-week__ghost-icon {
+    width: 12px;
+    height: 12px;
+    flex-shrink: 0;
+}
+
+.ht-week__ghost-label {
+    font-size: 12px;
+    font-weight: 600;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.ht-week__ghost-time {
+    font-size: 11px;
+    opacity: 0.75;
+}
+
+.vuecalendar-ev-enter-active,
+.ht-ev-enter-active {
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    transition-delay: calc(var(--i, 0) * 0.03s);
+}
+
+.vuecalendar-ev-leave-active,
+.ht-ev-leave-active {
+    transition: opacity 0.15s ease;
+    position: absolute;
+}
+
+.vuecalendar-ev-enter-from,
+.ht-ev-enter-from {
+    opacity: 0;
+    transform: translateY(6px) scaleY(0.92);
+}
+
+.vuecalendar-ev-leave-to,
+.ht-ev-leave-to {
+    opacity: 0;
+}

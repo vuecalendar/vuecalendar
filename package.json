@@ -1,0 +1,25 @@
+{
+  "name": "vuecalendar-public-workspace",
+  "private": true,
+  "type": "module",
+  "packageManager": "npm@10",
+  "workspaces": [
+    "packages/core",
+    "packages/calendar-controls",
+    "packages/current-time",
+    "packages/event-modal",
+    "packages/event-recurrence",
+    "packages/events-service",
+    "packages/scroll-controller"
+  ],
+  "scripts": {
+    "changeset": "changeset",
+    "changeset:fixed": "node ./scripts/create-fixed-changeset.mjs",
+    "version-packages": "changeset version",
+    "release": "changeset publish",
+    "build:core": "npm run build --workspace=packages/core"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.29.7"
+  }
+}
