@@ -1,5 +1,47 @@
 # @vuecalendar/core
 
+## 1.0.7
+
+### Patch Changes
+
+- Fix registry
+
+## 1.0.6
+
+### Patch Changes
+
+- Fix registry
+- Fix registry
+- Fix registry
+
+## 1.0.5
+
+### Patch Changes
+
+- Fix registry
+
+## 1.0.4
+
+### Patch Changes
+
+- Fix registry 2
+- Fix registry 3
+- Fix registry 3
+- Fix registry 4
+- Fix registry 4
+
+## 1.0.3
+
+### Patch Changes
+
+- Fix registry
+
+## 1.0.2
+
+### Patch Changes
+
+- Describe the premium fix
+
 ## 1.0.1
 
 ### Patch Changes
