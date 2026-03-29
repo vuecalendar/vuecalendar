@@ -1,5 +1,13 @@
 # @vuecalendar/events-service
 
+## 1.0.1
+
+### Patch Changes
+
+- Fix double time notations on calendar
+- Updated dependencies
+  - @vuecalendar/core@1.0.1
+
 ## 4.0.1
 
 ### Patch Changes
@@ -49,4 +57,3 @@
 
 - Updated dependencies [a5234b6]
   - @vuecalendar/shared@2.0.0
-

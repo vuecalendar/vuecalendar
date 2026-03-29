@@ -4,10 +4,9 @@
   "commit": false,
   "fixed": [
     [
-      "@vuecalendar/core",
       "@vuecalendar/calendar-controls",
+      "@vuecalendar/core",
       "@vuecalendar/current-time",
-      "@vuecalendar/event-modal",
       "@vuecalendar/event-recurrence",
       "@vuecalendar/events-service",
       "@vuecalendar/scroll-controller"

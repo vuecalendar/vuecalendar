@@ -154,13 +154,19 @@ export function buildHourTicks({
     const maxTop = Math.max(0, totalHeight - labelHeight);
     const ticks = [];
     const normalizedStep = normalizeGridStep(step);
-    const firstTick = Math.ceil(start / normalizedStep) * normalizedStep;
+    const isFullDayRange = start === 0 && (end - start) >= MINUTES_PER_DAY;
+    const firstTick = isFullDayRange
+        ? start + normalizedStep
+        : Math.ceil(start / normalizedStep) * normalizedStep;
+    const lastTick = isFullDayRange
+        ? end - normalizedStep
+        : end;
     const formatter = new Intl.DateTimeFormat(locale, {
         timeZone: 'UTC',
         ...formatOptions,
     });
 
-    for (let minutes = firstTick; minutes <= end; minutes += normalizedStep) {
+    for (let minutes = firstTick; minutes <= lastTick; minutes += normalizedStep) {
         const offsetMinutes = minutes - start;
         const top = clamp((offsetMinutes / MINUTES_PER_HOUR) * hourHeight - labelOffset, 0, maxTop);
         const displayMinutes = ((minutes % MINUTES_PER_DAY) + MINUTES_PER_DAY) % MINUTES_PER_DAY;

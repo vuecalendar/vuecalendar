@@ -4,10 +4,9 @@
   "type": "module",
   "packageManager": "npm@10",
   "workspaces": [
-    "packages/core",
     "packages/calendar-controls",
+    "packages/core",
     "packages/current-time",
-    "packages/event-modal",
     "packages/event-recurrence",
     "packages/events-service",
     "packages/scroll-controller"

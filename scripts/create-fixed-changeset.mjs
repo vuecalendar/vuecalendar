@@ -6,16 +6,18 @@ const [, , bumpType, ...summaryParts] = process.argv;
 const allowedBumps = new Set(['patch', 'minor', 'major']);
 const packageNames = [
     '@vuecalendar/calendar-controls',
-    '@vuecalendar/copy-event',
+    '@vuecalendar-premium/copy-event',
     '@vuecalendar/core',
     '@vuecalendar/current-time',
-    '@vuecalendar/drag-to-calendar',
-    '@vuecalendar/event-modal',
+    '@vuecalendar-premium/drag-to-calendar',
+    '@vuecalendar-premium/draw',
+    '@vuecalendar-premium/event-modal',
     '@vuecalendar/event-recurrence',
     '@vuecalendar/events-service',
-    '@vuecalendar/resource-scheduler',
-    '@vuecalendar/shared',
-    '@vuecalendar/zoom',
+    '@vuecalendar-premium/resize',
+    '@vuecalendar-premium/resource-scheduler',
+    '@vuecalendar/scroll-controller',
+    '@vuecalendar-premium/zoom',
 ];
 
 if (!allowedBumps.has(bumpType)) {

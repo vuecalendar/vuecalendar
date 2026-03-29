@@ -1,5 +1,11 @@
 # @vuecalendar/core
 
+## 1.0.1
+
+### Patch Changes
+
+- Fix double time notations on calendar
+
 ## 4.0.1
 
 ### Patch Changes
@@ -44,4 +50,3 @@
 
   How to update:
   Replace imports like `@vuecalendar/core` with `@vuecalendar/core` and update any related package references in your app, docs, or tooling configuration.
-
