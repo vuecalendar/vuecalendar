@@ -1,6 +1,6 @@
 {
   "name": "@vuecalendar/core",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "type": "module",
   "description": "Vue 3 calendar component - no external UI dependencies",
   "exports": {

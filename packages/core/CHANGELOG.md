@@ -1,10 +1,16 @@
 # @vuecalendar/core
 
+## 1.0.8
+
+### Patch Changes
+
+- Describe the public fix
+
 ## 1.0.7
 
 ### Patch Changes
 
-- Fix registry
+- fixes
 
 ## 1.0.6
 

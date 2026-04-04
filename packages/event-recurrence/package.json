@@ -1,6 +1,6 @@
 {
   "name": "@vuecalendar/event-recurrence",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "type": "module",
   "description": "Event recurrence plugin for @vuecalendar/core - expand recurring events using RRULE-style config",
   "exports": {
