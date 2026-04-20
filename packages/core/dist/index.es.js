@@ -1,5 +1,5 @@
 (function(){if(typeof document==='undefined')return;var s=document.createElement('style');s.setAttribute('data-vuecalendar-core','');s.textContent=":root{--vuecalendar-color-primary: #2563eb;--vuecalendar-color-primary-bg: #eff6ff;--vuecalendar-color-primary-ring: #bfdbfe;--vuecalendar-color-primary-focus: #93c5fd;--vuecalendar-color-danger: #ef4444;--vuecalendar-text-900: #111827;--vuecalendar-text-700: #374151;--vuecalendar-text-600: #4b5563;--vuecalendar-text-500: #6b7280;--vuecalendar-text-400: #9ca3af;--vuecalendar-text-300: #d1d5db;--vuecalendar-border: #e5e7eb;--vuecalendar-border-light: #f3f4f6;--vuecalendar-bg: #ffffff;--vuecalendar-bg-subtle: #f9fafb;--vuecalendar-bg-muted: #fafafa;--vuecalendar-bg-hover: #f3f4f6;--vuecalendar-sidebar-width: 160px;--vuecalendar-calendar-height: calc(100vh - 210px) ;--vuecalendar-font-size: 13px;--vuecalendar-radius-sm: 4px;--vuecalendar-radius-md: 6px;--vuecalendar-radius-lg: 8px;--vuecalendar-radius-xl: 12px;--vuecalendar-hour-height: 64px;--vuecalendar-time-axis-width: 48px;--vuecalendar-off-hours-bg: rgba(0, 0, 0, .022);--vuecalendar-weekend-bg: rgba(0, 0, 0, .018);--vuecalendar-half-grid-color: rgba(0, 0, 0, .04);--vuecalendar-nav-duration: .18s;--vuecalendar-nav-distance: 24px;--ht-color-primary: var(--vuecalendar-color-primary);--ht-color-primary-bg: var(--vuecalendar-color-primary-bg);--ht-color-primary-ring: var(--vuecalendar-color-primary-ring);--ht-color-primary-focus: var(--vuecalendar-color-primary-focus);--ht-color-danger: var(--vuecalendar-color-danger);--ht-text-900: var(--vuecalendar-text-900);--ht-text-700: var(--vuecalendar-text-700);--ht-text-600: var(--vuecalendar-text-600);--ht-text-500: var(--vuecalendar-text-500);--ht-text-400: var(--vuecalendar-text-400);--ht-text-300: var(--vuecalendar-text-300);--ht-border: var(--vuecalendar-border);--ht-border-light: var(--vuecalendar-border-light);--ht-bg: var(--vuecalendar-bg);--ht-bg-subtle: var(--vuecalendar-bg-subtle);--ht-bg-muted: var(--vuecalendar-bg-muted);--ht-bg-hover: var(--vuecalendar-bg-hover);--ht-sidebar-width: var(--vuecalendar-sidebar-width);--ht-calendar-height: var(--vuecalendar-calendar-height);--ht-font-size: var(--vuecalendar-font-size);--ht-radius-sm: var(--vuecalendar-radius-sm);--ht-radius-md: var(--vuecalendar-radius-md);--ht-radius-lg: var(--vuecalendar-radius-lg);--ht-radius-xl: var(--vuecalendar-radius-xl);--ht-hour-height: var(--vuecalendar-hour-height);--ht-time-axis-width: var(--vuecalendar-time-axis-width);--ht-off-hours-bg: var(--vuecalendar-off-hours-bg);--ht-weekend-bg: var(--vuecalendar-weekend-bg);--ht-half-grid-color: var(--vuecalendar-half-grid-color);--ht-nav-duration: var(--vuecalendar-nav-duration);--ht-nav-distance: var(--vuecalendar-nav-distance)}.vuecalendar-nav-next-enter-active,.vuecalendar-nav-next-leave-active,.vuecalendar-nav-prev-enter-active,.vuecalendar-nav-prev-leave-active{transition:opacity .18s ease,transform .18s ease;will-change:opacity,transform}.vuecalendar-nav-next-enter-from{transform:translate(24px);opacity:0}.vuecalendar-nav-next-leave-to,.vuecalendar-nav-prev-enter-from{transform:translate(-24px);opacity:0}.vuecalendar-nav-prev-leave-to{transform:translate(24px);opacity:0}.vuecalendar{display:flex;overflow:hidden;background:var(--ht-bg);height:var(--ht-calendar-height, calc(100vh - 210px) );font-family:inherit;font-size:var(--ht-font-size);color:var(--ht-text-900)}.vuecalendar__sidebar{width:var(--ht-sidebar-width);flex-shrink:0;border-right:1px solid var(--ht-border);display:flex;flex-direction:column;gap:12px;padding:12px 10px;overflow-y:auto;background:var(--ht-bg)}.vuecalendar__sidebar-actions{display:flex;justify-content:flex-end;padding:0 2px 2px}.vuecalendar__sidebar-action{border:none;background:none;padding:4px 6px;font-size:11px;font-weight:600;color:var(--ht-text-500);cursor:pointer;font-family:inherit}.vuecalendar__sidebar-action:hover{color:var(--ht-text-900)}.vuecalendar__sidebar-list{display:flex;flex-direction:column;gap:3px}.vuecalendar__sidebar-item{display:flex;align-items:center;gap:8px;min-height:34px;padding:6px 8px;border:1px solid transparent;border-left-width:4px;border-radius:4px;cursor:pointer;font-size:var(--ht-font-size);-webkit-user-select:none;user-select:none;transition:background .14s ease,color .14s ease,border-color .14s ease;color:var(--ht-text-600);position:relative;background:transparent;border-left-color:transparent}.vuecalendar__sidebar-item--draggable{cursor:grab}.vuecalendar__sidebar-item--hidden{opacity:.58}.vuecalendar__sidebar-item:hover:not(.vuecalendar__sidebar-item--active){background:var(--ht-bg-hover);color:var(--ht-text-900)}.vuecalendar__sidebar-item--active{font-weight:600;border-color:#1118270f;border-left-color:var(--ht-sidebar-accent, var(--ht-color-primary));background:color-mix(in srgb,var(--ht-sidebar-container, var(--ht-color-primary-bg)) 78%,white)}.vuecalendar__sidebar-dot{width:9px;height:9px;border-radius:50%;flex-shrink:0}.vuecalendar__sidebar-label{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;line-height:1.25}.vuecalendar__sidebar-visibility{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border:none;background:transparent;color:currentColor;opacity:.74;cursor:pointer;padding:0;flex-shrink:0}.vuecalendar__sidebar-visibility:hover{opacity:1}.vuecalendar__sidebar-visibility svg{width:14px;height:14px;display:block}.vuecalendar__sidebar-hint{font-size:11px;color:var(--ht-text-400);line-height:1.5;display:flex;align-items:flex-start;gap:6px;padding:4px 8px 0}.vuecalendar__hint-icon{width:11px;height:11px;flex-shrink:0;margin-top:2px;color:var(--ht-text-400)}.vuecalendar__main{flex:1;display:flex;flex-direction:column;overflow:hidden;min-width:0;position:relative}.vuecalendar__nav{display:flex;align-items:center;gap:4px;padding:8px 12px;border-bottom:1px solid var(--ht-border);flex-shrink:0;flex-wrap:wrap;position:relative;z-index:30}.vuecalendar__nav-btn{display:inline-flex;align-items:center;justify-content:center;border:none;background:none;cursor:pointer;padding:5px 8px;border-radius:var(--ht-radius-md);font-size:var(--ht-font-size);color:var(--ht-text-700);transition:background .12s,color .12s;line-height:1}.vuecalendar__nav-btn:hover{background:var(--ht-bg-hover)}.vuecalendar__nav-btn svg{width:14px;height:14px;display:block}.vuecalendar__nav-btn--text{font-weight:500}.vuecalendar__header-label{font-weight:600;font-size:var(--ht-font-size);margin-left:4px;margin-right:auto;white-space:nowrap;color:var(--ht-text-900)}.vuecalendar__nav-right{display:flex;align-items:center;gap:8px}.vuecalendar__view-select-wrap{display:grid;gap:3px}.vuecalendar__view-select-label{font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ht-text-400)}.vuecalendar__view-select{min-height:32px;padding:0 28px 0 10px;border:1px solid var(--ht-border);border-radius:var(--ht-radius-md);background:var(--ht-bg);color:var(--ht-text-900);font-size:var(--ht-font-size);font-family:inherit;font-weight:500;cursor:pointer}.vuecalendar__drag-ghost{position:fixed;pointer-events:none;z-index:9999;border-radius:var(--ht-radius-md);padding:6px 10px;font-size:12px;font-weight:600;box-shadow:0 4px 16px #00000026;display:flex;align-items:center;gap:6px;-webkit-user-select:none;user-select:none;min-width:80px}.vuecalendar__drag-ghost-icon{width:11px;height:11px;flex-shrink:0}.vuecalendar--mobile .vuecalendar__nav{flex-wrap:nowrap;align-items:center;gap:4px}.vuecalendar--mobile .vuecalendar__header-label{flex:1 1 auto;overflow:hidden;text-overflow:ellipsis;margin:0 0 0 2px;order:0;font-size:14px;line-height:1.1;white-space:nowrap}.vuecalendar--mobile .vuecalendar__nav-right{margin-left:0;flex:0 0 auto}.vuecalendar--mobile .vuecalendar__view-select-wrap{display:grid}.vuecalendar--mobile .vuecalendar-date-picker__input{border:none;background:transparent;padding:0;min-width:0;width:32px;height:32px;border-radius:var(--ht-radius-md);justify-content:center;color:var(--ht-text-700)}.vuecalendar--mobile .vuecalendar-date-picker__icon svg{width:13px;height:13px}.vuecalendar--mobile .vuecalendar__nav-btn--text,.vuecalendar--mobile .vuecalendar__nav-btn:not(.vuecalendar__nav-btn--text){padding:4px 5px;font-size:14px}.vuecalendar--mobile .vuecalendar__view-select{min-height:30px;padding:0 24px 0 8px;font-size:14px}.vuecalendar-date-picker{position:relative;display:inline-block;font-family:inherit;font-size:13px}.vuecalendar-date-picker__input{display:flex;align-items:center;justify-content:center;border:none;border-radius:0;background:transparent;cursor:pointer;transition:color .15s,background .15s;width:34px;height:34px;padding:0;color:#6b7280}.vuecalendar-date-picker__input:hover{color:#111827}.vuecalendar-date-picker__icon{display:flex;align-items:center;justify-content:center;padding:0;color:currentColor}.vuecalendar-date-picker__icon svg{width:14px;height:14px}.vuecalendar-date-picker__panel{position:absolute;top:calc(100% + 4px);left:0;right:auto;z-index:60;background:#fff;border:1px solid #e5e7eb;border-radius:8px;box-shadow:0 8px 24px #0000001f;padding:10px;width:230px;-webkit-user-select:none;user-select:none}.vuecalendar-date-picker__header{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}.vuecalendar-date-picker__month-label{font-weight:600;font-size:13px;color:#111827}.vuecalendar-date-picker__nav-btn{display:flex;align-items:center;justify-content:center;border:none;background:none;cursor:pointer;padding:4px;border-radius:4px;color:#6b7280;transition:background .12s,color .12s}.vuecalendar-date-picker__nav-btn:hover{background:#f3f4f6;color:#111827}.vuecalendar-date-picker__nav-btn svg{width:14px;height:14px}.vuecalendar-date-picker__dow-row{display:grid;grid-template-columns:repeat(7,1fr);margin-bottom:4px}.vuecalendar-date-picker__dow{text-align:center;font-size:11px;font-weight:500;color:#9ca3af;padding:2px 0;text-transform:uppercase}.vuecalendar-date-picker__grid{display:grid;grid-template-columns:repeat(7,1fr);gap:2px}.vuecalendar-date-picker__day{border:none;background:none;cursor:pointer;border-radius:50%;aspect-ratio:1;font-size:12px;color:#374151;display:flex;align-items:center;justify-content:center;transition:background .1s,color .1s;padding:0}.vuecalendar-date-picker__day:hover:not(.vuecalendar-date-picker__day--selected){background:#f3f4f6}.vuecalendar-date-picker__day--other{color:#d1d5db}.vuecalendar-date-picker__day--today{font-weight:700;color:#2563eb}.vuecalendar-date-picker__day--selected{background:#2563eb!important;color:#fff!important}.vuecalendar-event{position:absolute;left:2px;right:2px;border-radius:4px;overflow:hidden;box-sizing:border-box;-webkit-user-select:none;user-select:none;cursor:pointer;font-size:12px}.vuecalendar-event__header{display:flex;align-items:center;justify-content:space-between;padding:3px 6px 1px;gap:4px}.vuecalendar-event__title{font-weight:700;font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;line-height:1.3;flex:1;min-width:0}.vuecalendar-event__time,.vuecalendar-event__desc{display:flex;align-items:center;gap:3px;padding:0 6px;font-size:11px;line-height:1.4;opacity:.8;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.vuecalendar-event__desc{opacity:.7}.vuecalendar-event__icon{width:10px;height:10px;flex-shrink:0}.vuecalendar-event__resize-handle{position:absolute;bottom:0;left:0;right:0;height:8px;cursor:s-resize}.vuecalendar-week{display:flex;flex-direction:column;flex:1;overflow:hidden;position:relative}.vuecalendar-week__day-headers{display:flex;flex-shrink:0;border-bottom:1px solid var(--ht-border);background:var(--ht-bg);z-index:10}.vuecalendar-week__day-header{flex:1;text-align:center;padding:6px 0;min-width:0}.vuecalendar-week__day-name{font-size:11px;color:var(--ht-text-400);text-transform:uppercase;letter-spacing:.04em}.vuecalendar-week__day-num{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:500;color:var(--ht-text-700);margin:2px auto 0}.vuecalendar-week__day-num--today{background:var(--ht-color-primary);color:var(--ht-bg)}.vuecalendar-week__grid{flex:1;overflow-y:auto;position:relative}.vuecalendar-week__multi-day{flex-shrink:0;border-bottom:1px solid var(--ht-border);background:var(--ht-bg);overflow:hidden}.vuecalendar-week__multi-day-grid{display:flex;position:relative;height:100%}.vuecalendar-week__multi-day-col{flex:1;min-width:0;border-left:1px solid var(--ht-border-light)}.vuecalendar-week__multi-day-col:first-child{border-left:0}.vuecalendar-week__multi-day-event{position:absolute;display:flex;align-items:center;justify-content:space-between;min-width:0;padding:0 8px;border:0;border-radius:4px;font-size:12px;font-weight:600;line-height:1;font-family:inherit;text-align:left;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;box-shadow:inset 0 0 0 1px #0f172a0a;cursor:pointer}.vuecalendar-week__multi-day-event--continues-left{border-top-left-radius:0;border-bottom-left-radius:0}.vuecalendar-week__multi-day-event--continues-right{border-top-right-radius:0;border-bottom-right-radius:0}.vuecalendar-week__multi-day-title{display:block;min-width:0;overflow:hidden;text-overflow:ellipsis}.vuecalendar-week__multi-day-copy{display:flex;align-items:center;gap:6px;min-width:0;flex:1}.vuecalendar-week__multi-day-time{flex-shrink:0;opacity:.8;font-weight:500}.vuecalendar-week__multi-day-edge{width:0;height:0;flex-shrink:0;border-top:7px solid transparent;border-bottom:7px solid transparent}.vuecalendar-week__multi-day-edge--left{margin-right:6px;border-right:7px solid rgba(255,255,255,.92)}.vuecalendar-week__multi-day-edge--right{margin-left:6px;border-left:7px solid rgba(255,255,255,.92)}.vuecalendar-week__grid--bounded{overflow-y:hidden}.vuecalendar-week__grid--scrollable-bounded{overflow-y:auto}.vuecalendar-week__grid--static{overflow-y:hidden}.vuecalendar-week__inner{display:flex;position:relative}.vuecalendar-week__time-axis{flex-shrink:0;position:relative;-webkit-user-select:none;user-select:none}.vuecalendar-week__hour-label{position:absolute;right:4px;left:0;font-size:11px;color:var(--ht-text-400);text-align:right;line-height:1}.vuecalendar-week__col{flex:1;position:relative;border-left:1px solid var(--ht-border-light);min-width:0}.vuecalendar-week__grid-line{position:absolute;width:100%;border-top:1px solid var(--ht-border-light);pointer-events:none}.vuecalendar-week__grid-line--half{border-top:1px dashed var(--ht-half-grid-color)}.vuecalendar-week__shade{position:absolute;width:100%;background:var(--ht-off-hours-bg);pointer-events:none}.vuecalendar-week__weekend-shade{position:absolute;top:0;right:0;bottom:0;left:0;background:var(--ht-weekend-bg);pointer-events:none}.vuecalendar-week__events-layer{position:absolute;top:0;right:0;bottom:0;left:0;pointer-events:none;overflow:hidden}.vuecalendar-week__event{pointer-events:auto}.vuecalendar-week__drag-origin{position:absolute;left:2px;right:2px;border-radius:var(--ht-radius-sm);border:2px dashed #d1d5db;background:transparent;pointer-events:none;z-index:0}.vuecalendar-week__ghost{position:absolute;left:2px;right:2px;border-radius:var(--ht-radius-sm);pointer-events:none;display:flex;align-items:center;justify-content:center;gap:4px;font-size:12px;font-weight:600}.vuecalendar-week__ghost--sidebar{flex-direction:column;align-items:flex-start;padding:4px 6px}.vuecalendar-week__ghost-icon{width:12px;height:12px;flex-shrink:0}.vuecalendar-week__ghost-label{font-size:12px;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:100%}.vuecalendar-week__ghost-time{font-size:11px;opacity:.75}.vuecalendar-ev-enter-active{transition:opacity .2s ease,transform .2s ease;transition-delay:calc(var(--i, 0) * .03s)}.vuecalendar-ev-leave-active{transition:opacity .15s ease;position:absolute}.vuecalendar-ev-enter-from{opacity:0;transform:translateY(6px) scaleY(.92)}.vuecalendar-ev-leave-to{opacity:0}.vuecalendar-month{display:flex;flex-direction:column;flex:1;overflow:hidden;min-height:0}.vuecalendar-month__dow-row{display:grid;grid-template-columns:repeat(7,1fr);border-bottom:1px solid var(--ht-border);flex-shrink:0}.vuecalendar-month__dow{padding:8px 0;text-align:center;font-size:11px;font-weight:500;color:var(--ht-text-400);text-transform:uppercase;letter-spacing:.04em}.vuecalendar-month__grid{flex:1;display:grid;grid-template-columns:repeat(7,1fr);grid-auto-rows:minmax(0,1fr);overflow-y:auto;min-height:0;align-content:stretch}.vuecalendar-month__cell{border-right:1px solid var(--ht-border-light);border-bottom:1px solid var(--ht-border-light);padding:4px;min-height:96px;height:100%;display:flex;flex-direction:column;cursor:pointer;transition:background .1s}.vuecalendar-month__cell:hover{background:var(--ht-bg-muted)}.vuecalendar-month__cell--other{background:#00000003}.vuecalendar-month__cell--today{box-shadow:inset 0 0 0 2px var(--ht-color-primary-ring)}.vuecalendar-month__cell--selected{background:color-mix(in srgb,var(--ht-color-primary-bg, #eef2ff) 82%,white);box-shadow:inset 0 0 0 2px var(--ht-color-primary-ring)}.vuecalendar-month__day-num{width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:500;color:var(--ht-text-700);margin-bottom:4px}.vuecalendar-month__day-num--today{background:var(--ht-color-primary);color:var(--ht-bg)}.vuecalendar-month__day-num--other{color:var(--ht-text-300)}.vuecalendar-month__events{display:flex;flex-direction:column;gap:2px;flex:1;min-height:0}.vuecalendar-month__events--mobile{flex-direction:row;align-items:center;gap:4px;min-height:8px;margin-top:6px}.vuecalendar-month__badge{font-size:11px;padding:1px 4px;border-radius:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;cursor:pointer}.vuecalendar-month__more{font-size:11px;color:var(--ht-text-400);padding:0 4px}.vuecalendar-month__dot{width:6px;height:6px;border-radius:999px;flex-shrink:0}.vuecalendar-month__agenda{border-top:1px solid var(--ht-border);padding:10px 8px 12px;background:var(--ht-bg);display:flex;flex-direction:column;gap:8px}.vuecalendar-month__agenda-item{width:100%;border:none;border-radius:8px;padding:10px 12px;text-align:left;cursor:pointer;display:flex;flex-direction:column;gap:4px;font-family:inherit}.vuecalendar-month__agenda-title{font-size:12px;font-weight:700}.vuecalendar-month__agenda-range{font-size:11px;opacity:.8}.vuecalendar-month__agenda-empty{font-size:12px;color:var(--ht-text-400);padding:6px 4px}@media (max-width: 720px){.vuecalendar-month--mobile{overflow:visible}.vuecalendar-month--mobile .vuecalendar-month__dow-row{border-bottom:none;padding:8px 6px 2px}.vuecalendar-month--mobile .vuecalendar-month__dow{padding:6px 0;font-size:12px;letter-spacing:0;text-transform:none}.vuecalendar-month--mobile .vuecalendar-month__grid{min-height:0;overflow:visible}.vuecalendar-month--mobile .vuecalendar-month__cell{min-height:54px;padding:8px 4px 6px}.vuecalendar-month--mobile .vuecalendar-month__day-num{width:28px;height:28px;margin:0 auto;font-size:14px}}.vuecalendar-list{display:flex;flex-direction:column;min-height:100%;background:var(--ht-bg)}.vuecalendar-list__header{padding:10px 14px;border-bottom:1px solid var(--ht-border);background:linear-gradient(180deg,#6366f10f,#6366f105)}.vuecalendar-list__day-label{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ht-text-500)}.vuecalendar-list__empty{padding:18px 14px;color:var(--ht-text-400);font-size:13px}.vuecalendar-list__item{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px;align-items:center;padding:11px 14px;border:0;border-bottom:1px solid var(--ht-border-light);border-left:4px solid var(--ht-list-accent);background:transparent;color:var(--ht-text-900);font:inherit;text-align:left;cursor:pointer}.vuecalendar-list__item:hover{background:color-mix(in srgb,var(--ht-list-container) 42%,white)}.vuecalendar-list__title{min-width:0;font-size:13px;font-weight:500;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.vuecalendar-list__meta{display:flex;flex-direction:column;align-items:flex-end;gap:2px;color:var(--ht-text-500);font-size:12px;white-space:nowrap}.vuecalendar-list__time-primary,.vuecalendar-list__time-secondary{line-height:1.2}@media (max-width: 760px){.vuecalendar-list__item{grid-template-columns:1fr}.vuecalendar-list__meta{align-items:flex-start}}.vuecalendar-resource{display:flex;flex:1;min-height:0;overflow:hidden}.vuecalendar-resource__scroll-shell{flex:1;min-width:0;overflow:hidden}.vuecalendar-resource__content{display:flex;flex-direction:column;width:100%;min-height:100%;background:var(--ht-bg)}.vuecalendar-resource__headers{position:sticky;top:0;z-index:10;background:var(--ht-bg);border-bottom:1px solid var(--ht-border)}.vuecalendar-resource__day-row,.vuecalendar-resource__resource-row,.vuecalendar-resource__columns{display:grid}.vuecalendar-resource__day-row{border-bottom:1px solid var(--ht-border)}.vuecalendar-resource__day-header{display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:0;padding:6px 4px;border-left:1px solid var(--ht-border-light)}.vuecalendar-resource__day-header:first-child{border-left:0}.vuecalendar-resource__day-name{font-size:11px;color:var(--ht-text-400);text-transform:uppercase;letter-spacing:.04em}.vuecalendar-resource__day-num{display:flex;align-items:center;justify-content:center;min-width:28px;height:28px;margin-top:2px;padding:0 8px;border-radius:999px;font-size:14px;font-weight:600;color:var(--ht-text-700)}.vuecalendar-resource__day-num--today{background:var(--ht-color-primary);color:var(--ht-bg)}.vuecalendar-resource__resource-header{min-width:0;padding:8px 10px;border-left:1px solid var(--ht-border-light);border-top:1px solid var(--ht-border-light);font-size:12px;font-weight:600;color:var(--ht-resource-on-container);background:var(--ht-resource-container);box-shadow:inset 4px 0 0 var(--ht-resource-accent);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.vuecalendar-resource__resource-header:first-child{border-left:0}.vuecalendar-resource__grid{flex:1;min-height:0;overflow-y:auto}.vuecalendar-resource__grid--bounded{overflow-y:hidden}.vuecalendar-resource__grid--scrollable-bounded{overflow-y:auto}.vuecalendar-resource__grid--static{overflow-y:hidden}.vuecalendar-resource__inner{display:flex;position:relative}.vuecalendar-resource__time-axis{position:sticky;left:0;z-index:2;flex-shrink:0;background:var(--ht-bg);border-right:1px solid var(--ht-border)}.vuecalendar-resource__hour-label{position:absolute;right:4px;left:0;font-size:11px;color:var(--ht-text-400);text-align:right;line-height:1}.vuecalendar-resource__columns{flex:1;min-width:0;width:100%;position:relative}.vuecalendar-resource__col{position:relative;min-width:0;border-left:1px solid var(--ht-border-light)}.vuecalendar-resource__col--weekend{background:#3b82f608}.vuecalendar-resource__grid-line{position:absolute;inset-inline:0;border-top:1px solid var(--ht-border-light);pointer-events:none}.vuecalendar-resource__grid-line--half{border-top:1px dashed var(--ht-half-grid-color)}.vuecalendar-resource__shade{position:absolute;inset-inline:0;background:var(--ht-off-hours-bg);pointer-events:none}.vuecalendar-resource__weekend-shade{position:absolute;top:0;right:0;bottom:0;left:0;background:var(--ht-weekend-bg);opacity:.45;pointer-events:none}.vuecalendar-resource__events-layer{position:absolute;top:0;right:0;bottom:0;left:0;overflow:hidden;pointer-events:none}.vuecalendar-resource__event{pointer-events:auto}.vuecalendar-resource__event .vuecalendar-event__resize-handle{display:none}@media (max-width: 720px){.vuecalendar-resource__resource-header{font-size:11px;padding:7px 8px}}.vuecalendar-event-modal__backdrop{position:fixed;top:0;right:0;bottom:0;left:0;display:flex;align-items:center;justify-content:center;padding:20px;background:#0f172a6b;-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px);z-index:9999}.vuecalendar-event-modal{width:min(100%,520px);background:#fff;border:1px solid #e5e7eb;border-radius:8px;box-shadow:0 20px 60px #0f172a2e;overflow:hidden}.vuecalendar-event-modal--movable{position:relative}.vuecalendar-event-modal--floating{position:fixed;margin:0}.vuecalendar-event-modal--movable .vuecalendar-event-modal__header{cursor:move;-webkit-user-select:none;user-select:none}.vuecalendar-event-modal--movable .vuecalendar-event-modal__icon-btn{cursor:pointer}.vuecalendar-event-modal__header,.vuecalendar-event-modal__footer{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 16px}.vuecalendar-event-modal__header{border-bottom:1px solid #eef2f7}.vuecalendar-event-modal__footer{justify-content:flex-end;border-top:1px solid #eef2f7}.vuecalendar-event-modal__eyebrow{margin:0 0 4px;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#64748b}.vuecalendar-event-modal__title{margin:0;font-size:18px;font-weight:600;color:#0f172a}.vuecalendar-event-modal__body{padding:16px;display:flex;flex-direction:column;gap:12px}.vuecalendar-event-modal__grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.vuecalendar-event-modal__field{display:flex;flex-direction:column;gap:5px}.vuecalendar-event-modal__field span{font-size:11px;font-weight:600;color:#334155}.vuecalendar-event-modal__field input,.vuecalendar-event-modal__field select,.vuecalendar-event-modal__field textarea{width:100%;border:1px solid #cbd5e1;background:#fff;border-radius:6px;padding:8px 10px;font:inherit;font-size:12px;line-height:1.4;color:#0f172a;transition:border-color .14s ease,box-shadow .14s ease,background .14s ease}.vuecalendar-event-modal__field input::placeholder,.vuecalendar-event-modal__field textarea::placeholder{color:#94a3b8}.vuecalendar-event-modal__field input:focus,.vuecalendar-event-modal__field select:focus,.vuecalendar-event-modal__field textarea:focus{outline:none;border-color:#94a3b8;box-shadow:0 0 0 3px #94a3b81f}.vuecalendar-event-modal__icon-btn,.vuecalendar-event-modal__btn{border:1px solid #dbe3ee;background:#fff;border-radius:6px;padding:7px 10px;font:inherit;font-size:11px;font-weight:600;color:#334155;cursor:pointer}.vuecalendar-event-modal__btn--primary{background:#111827;color:#fff;border-color:#111827}.vuecalendar-event-modal__btn--danger{color:#991b1b;border-color:#fecaca;background:#fef2f2}.vuecalendar-event-modal__icon-btn:disabled,.vuecalendar-event-modal__btn:disabled{opacity:.5;cursor:not-allowed}@media (max-width: 720px){.vuecalendar-event-modal__header,.vuecalendar-event-modal__body,.vuecalendar-event-modal__footer{padding-left:14px;padding-right:14px}.vuecalendar-event-modal__grid{grid-template-columns:1fr}}\n";document.head.appendChild(s);}());
-import { ref as W, computed as O, watch as nt, onMounted as uo, onBeforeUnmount as Yn, toRef as F, openBlock as S, createElementBlock as E, createElementVNode as g, unref as h, createStaticVNode as kl, toDisplayString as H, Fragment as q, renderList as te, normalizeClass as Se, createCommentVNode as Z, withModifiers as yt, normalizeStyle as A, renderSlot as Ae, createTextVNode as Xr, reactive as mn, createVNode as Da, TransitionGroup as Dl, withCtx as ft, createBlock as dt, createSlots as lr, mergeProps as Kr, watchEffect as Qc, nextTick as ed, onBeforeMount as td, isRef as nd, Transition as ps, normalizeProps as rr, guardReactiveProps as Lr, Teleport as Ml } from "vue";
+import { ref as W, computed as _, watch as nt, onMounted as uo, onBeforeUnmount as Yn, toRef as F, openBlock as S, createElementBlock as E, createElementVNode as g, unref as h, createStaticVNode as kl, toDisplayString as H, Fragment as q, renderList as te, normalizeClass as Se, createCommentVNode as Z, withModifiers as yt, normalizeStyle as A, renderSlot as Ae, createTextVNode as Xr, reactive as mn, createVNode as Da, TransitionGroup as Dl, withCtx as ft, createBlock as dt, createSlots as lr, mergeProps as Kr, watchEffect as Qc, nextTick as ed, onBeforeMount as td, isRef as nd, Transition as ps, normalizeProps as rr, guardReactiveProps as Lr, Teleport as Ml } from "vue";
 function Ze(e, t, n, r, o) {
   return rt(t, Sl(e, t), n, r, o);
 }
@@ -599,7 +599,7 @@ function Dt(e) {
     ...Je(lc, e)
   };
 }
-function de(e) {
+function fe(e) {
   return {
     branding: Ii,
     sign: tn(e),
@@ -1095,7 +1095,7 @@ function vr(e, t) {
 function Ys(e, t, n, r, o, a, s) {
   const i = e(lt(s).relativeTo), l = Math.max(gn(o), gn(a));
   if (vr(l, i))
-    return de(Vn(((y, b, w, C) => {
+    return fe(Vn(((y, b, w, C) => {
       const D = xn(ke(y), ke(b), C ? -1 : 1);
       if (!Number.isFinite(D[0]))
         throw new RangeError(jo);
@@ -1108,7 +1108,7 @@ function Ys(e, t, n, r, o, a, s) {
     throw new RangeError(Bo);
   r && (a = Be(a));
   const [u, c, d] = Oo(t, n, i), f = _o(d), v = qa(d), m = f(c, u, o);
-  return de(v(c, u, f(c, m, a), l));
+  return fe(v(c, u, f(c, m, a), l));
 }
 function _d(e, t, n, r, o) {
   const a = gn(r), [s, i, l, u, c] = ((T, B, I) => {
@@ -1123,7 +1123,7 @@ function _d(e, t, n, r, o) {
     return ne == null && (ne = 0), x == null && (x = Math.max(ne, B)), Xl(x, ne), K = Ra(K, ne, 1), [x, ne, K, ye, U];
   })(o, a, e), d = Math.max(a, s);
   if (!No(c) && d <= 6)
-    return de(Vn(((T, B, I, x, U) => {
+    return fe(Vn(((T, B, I, x, U) => {
       const K = To(ke(T), I, x, U);
       return {
         ...Ee,
@@ -1137,13 +1137,13 @@ function _d(e, t, n, r, o) {
   const k = r.sign, p = tn(D);
   if (k && p && k !== p)
     throw new RangeError(Sr);
-  return p && (D = Co(D, y(C), s, i, l, u, v, f, y, b)), de(D);
+  return p && (D = Co(D, y(C), s, i, l, u, v, f, y, b)), fe(D);
 }
 function Nd(e) {
   return e.sign === -1 ? Xa(e) : e;
 }
 function Xa(e) {
-  return de(Be(e));
+  return fe(Be(e));
 }
 function Be(e) {
   const t = {};
@@ -1319,7 +1319,7 @@ function Hd(e) {
   })(he(e));
   if (!t)
     throw new RangeError(ze(e));
-  return de(Vn(t));
+  return fe(Vn(t));
 }
 function Ad(e) {
   const t = nn(e) || Qa(e) || ei(e);
@@ -1517,7 +1517,7 @@ function si(e, t) {
 }
 function Zs(e, t, n, r) {
   const o = Zn(e, De(r), 3, 5), a = $o(t.epochNanoseconds, n.epochNanoseconds, ...o);
-  return de(e ? Be(a) : a);
+  return fe(e ? Be(a) : a);
 }
 function zs(e, t, n, r, o, a) {
   const s = Ro(r.calendar, o.calendar), i = De(a), [l, u, c, d] = Zn(n, i, 5), f = r.epochNanoseconds, v = o.epochNanoseconds, m = Ve(v, f);
@@ -1535,7 +1535,7 @@ function zs(e, t, n, r, o, a) {
     }
   else
     y = Ee;
-  return de(n ? Be(y) : y);
+  return fe(n ? Be(y) : y);
 }
 function Us(e, t, n, r, o) {
   const a = Ro(n.calendar, r.calendar), s = De(o), [i, l, u, c] = Zn(t, s, 6), d = xe(n), f = xe(r), v = Ve(f, d);
@@ -1549,7 +1549,7 @@ function Us(e, t, n, r, o) {
     }
   else
     m = Ee;
-  return de(t ? Be(m) : m);
+  return fe(t ? Be(m) : m);
 }
 function Vs(e, t, n, r, o) {
   const a = Ro(n.calendar, r.calendar), s = De(o);
@@ -1571,14 +1571,14 @@ function Du(e, t, n, r, o, a, s, i, l) {
     }
   else
     d = Ee;
-  return de(e ? Be(d) : d);
+  return fe(e ? Be(d) : d);
 }
 function Gs(e, t, n, r) {
   const o = De(r), [a, s, i, l] = Zn(e, o, 5, 5), u = Qt(li(t, n), kr(s, i), l), c = {
     ...Ee,
     ...Po(u, a)
   };
-  return de(e ? Be(c) : c);
+  return fe(e ? Be(c) : c);
 }
 function Qd(e, t, n, r, o, a) {
   const s = Ve(r.epochNanoseconds, n.epochNanoseconds);
@@ -1829,7 +1829,7 @@ function uf(e, t) {
 }
 function cf(e) {
   const t = gt(e, pi);
-  return de(Vn({
+  return fe(Vn({
     ...Ee,
     ...t
   }));
@@ -1916,7 +1916,7 @@ function yf(e, t, n) {
   })(e, t, n));
 }
 function gf(e, t) {
-  return de((n = e, r = t, Vn({
+  return fe((n = e, r = t, Vn({
     ...n,
     ...gt(r, pi)
   })));
@@ -2042,7 +2042,7 @@ function Sf(e = 0, t = 0, n = 0, r = 0, o = 0, a = 0) {
   return Dt(ko(pt($e, Hn(St, [e, t, n, r, o, a])), 1));
 }
 function Cf(e = 0, t = 0, n = 0, r = 0, o = 0, a = 0, s = 0, i = 0, l = 0, u = 0) {
-  return de(Vn(pt($l, Hn(ee, [e, t, n, r, o, a, s, i, l, u]))));
+  return fe(Vn(pt($l, Hn(ee, [e, t, n, r, o, a, s, i, l, u]))));
 }
 function Js(e, t, n = X) {
   return Le(e.epochNanoseconds, t, n);
@@ -2811,7 +2811,7 @@ function il(e, t, n) {
   const r = t.l(vt(n).epochNanoseconds, e);
   return r ? Pe(Te(r)) : null;
 }
-function se(e) {
+function le(e) {
   return Ie(e) ? (Oe(e) || {}).timeZone || sh(e) : ((t) => oi(Zd(he(t))))(e);
 }
 function zt(e, t) {
@@ -2876,7 +2876,7 @@ function Fe(e, t) {
   return Q(t), n;
 }
 function Tc(e, t, n) {
-  return mt(t.call(e, ce(we(n, e))));
+  return mt(t.call(e, de(we(n, e))));
 }
 function Tt(e) {
   return (t) => typeof t == "string" ? Ir(t) : ((n, r) => {
@@ -2886,7 +2886,7 @@ function Tt(e) {
     return a;
   })(t, e);
 }
-function ue(e) {
+function ce(e) {
   if (Ie(e)) {
     const t = Oe(e);
     return t && t.branding === Ii ? t : cf(e);
@@ -2906,7 +2906,7 @@ function ir(e) {
       }
       const n = Nr(e);
       return {
-        ...af(se, ae, Xo(n), e),
+        ...af(le, ae, Xo(n), e),
         calendar: n
       };
     }
@@ -2930,7 +2930,7 @@ function _n(e, t) {
     if (n && n.branding === sn)
       return Do(t), n;
     const r = Nr(e);
-    return sf(se, ae, Xo(r), r, e, t);
+    return sf(le, ae, Xo(r), r, e, t);
   }
   return Rd(e, t);
 }
@@ -3024,7 +3024,7 @@ const zm = {
   calendarId: (e) => je(e.calendar)
 }, th = /* @__PURE__ */ pt((e, t) => function(n) {
   const { i: r } = this;
-  return e(r[t](ce(we(n, r))));
+  return e(r[t](de(we(n, r))));
 }, Oc), nh = /* @__PURE__ */ co((e) => (t) => t[e], ee.concat("sign")), Vi = /* @__PURE__ */ co((e, t) => (n) => n[St[t]], an), _c = {
   epochSeconds: vd,
   epochMilliseconds: Ba,
@@ -3041,7 +3041,7 @@ const zm = {
   },
   equals: (e, t) => Kd(e, al(t)),
   toPlainDate(e, t) {
-    return ce(Lf($r, e, this, t));
+    return de(Lf($r, e, this, t));
   },
   toLocaleString(e, t, n) {
     const [r, o] = Km(t, n, e);
@@ -3061,23 +3061,23 @@ const zm = {
 }, pa = {
   getOffsetNanosecondsFor: Cc
 }, [ah, Pe, ih] = Ct(Ei, pf, _c, {
-  add: (e, t) => Pe($s(0, e, ue(t))),
-  subtract: (e, t) => Pe($s(1, e, ue(t))),
+  add: (e, t) => Pe($s(0, e, ce(t))),
+  subtract: (e, t) => Pe($s(1, e, ce(t))),
   until: (e, t, n) => ie(Zs(0, e, vt(t), n)),
   since: (e, t, n) => ie(Zs(1, e, vt(t), n)),
   round: (e, t) => Pe(gd(e, t)),
   equals: (e, t) => Vd(e, vt(t)),
   toZonedDateTime(e, t) {
     const n = en(t);
-    return ve(Js(e, se(n.timeZone), Ce(n.calendar)));
+    return ve(Js(e, le(n.timeZone), Ce(n.calendar)));
   },
-  toZonedDateTimeISO: (e, t) => ve(Js(e, se(t))),
+  toZonedDateTimeISO: (e, t) => ve(Js(e, le(t))),
   toLocaleString(e, t, n) {
     const [r, o] = Um(t, n, e);
     return r.format(o);
   },
-  toString: (e, t) => Ts(se, me, e, t),
-  toJSON: (e) => Ts(se, me, e),
+  toString: (e, t) => Ts(le, me, e, t),
+  toJSON: (e) => Ts(le, me, e),
   valueOf: ln
 }, {
   from: (e) => Pe(vt(e)),
@@ -3113,13 +3113,13 @@ const zm = {
   getNextTransition: ({ o: e }, t) => il(1, e, t),
   getPreviousTransition: ({ o: e }, t) => il(-1, e, t),
   equals(e, t) {
-    return !!si(this, se(t));
+    return !!si(this, le(t));
   },
   toString: (e) => e.id,
   toJSON: (e) => e.id
 }, {
   from(e) {
-    const t = se(e);
+    const t = le(e);
     return typeof t == "string" ? new Go(t) : t;
   }
 }), sh = /* @__PURE__ */ Sc(Object.keys(Nc)), [lh, Vt] = Ct(Ti, Sf, Vi, {
@@ -3127,13 +3127,13 @@ const zm = {
   with(e, t, n) {
     return Vt(yf(this, tr(t), n));
   },
-  add: (e, t) => Vt(Bs(0, e, ue(t))),
-  subtract: (e, t) => Vt(Bs(1, e, ue(t))),
+  add: (e, t) => Vt(Bs(0, e, ce(t))),
+  subtract: (e, t) => Vt(Bs(1, e, ce(t))),
   until: (e, t, n) => ie(Gs(0, e, zt(t), n)),
   since: (e, t, n) => ie(Gs(1, e, zt(t), n)),
   round: (e, t) => Vt(wd(e, t)),
   equals: (e, t) => Jd(e, zt(t)),
-  toZonedDateTime: (e, t) => ve(jf(se, Fe, ae, e, t)),
+  toZonedDateTime: (e, t) => ve(jf(le, Fe, ae, e, t)),
   toPlainDateTime: (e, t) => Me(Bf(e, Fe(t))),
   toLocaleString(e, t, n) {
     const [r, o] = qm(t, n, e);
@@ -3154,13 +3154,13 @@ const zm = {
   with(e, t, n) {
     return Wt(mf(ph, e, this, tr(t), n));
   },
-  add: (e, t, n) => Wt(js(ul, 0, e, ue(t), n)),
-  subtract: (e, t, n) => Wt(js(ul, 1, e, ue(t), n)),
+  add: (e, t, n) => Wt(js(ul, 0, e, ce(t), n)),
+  subtract: (e, t, n) => Wt(js(ul, 1, e, ce(t), n)),
   until: (e, t, n) => ie(Ws(cl, 0, e, On(t), n)),
   since: (e, t, n) => ie(Ws(cl, 1, e, On(t), n)),
   equals: (e, t) => Xd(e, On(t)),
   toPlainDate(e, t) {
-    return ce(Rf($r, e, this, t));
+    return de(Rf($r, e, this, t));
   },
   toLocaleString(e, t, n) {
     const [r, o] = Xm(t, n, e);
@@ -3185,14 +3185,14 @@ const zm = {
   withCalendar: (e, t) => Me(fi(e, Ce(t))),
   withPlainDate: (e, t) => Me(Wf(e, Fe(t))),
   withPlainTime: (e, t) => Me(Vf(e, Ai(t))),
-  add: (e, t, n) => Me(Rs(pn, 0, e, ue(t), n)),
-  subtract: (e, t, n) => Me(Rs(pn, 1, e, ue(t), n)),
+  add: (e, t, n) => Me(Rs(pn, 0, e, ce(t), n)),
+  subtract: (e, t, n) => Me(Rs(pn, 1, e, ce(t), n)),
   until: (e, t, n) => ie(Us(ht, 0, e, Ut(t), n)),
   since: (e, t, n) => ie(Us(ht, 1, e, Ut(t), n)),
   round: (e, t) => Me(bd(e, t)),
   equals: (e, t) => Gd(e, Ut(t)),
-  toZonedDateTime: (e, t, n) => ve(Of(ae, e, se(t), n)),
-  toPlainDate: (e) => ce(we(e)),
+  toZonedDateTime: (e, t, n) => ve(Of(ae, e, le(t), n)),
+  toPlainDate: (e) => de(we(e)),
   toPlainTime: (e) => Vt(Dt(e)),
   toPlainYearMonth(e) {
     return Wt(_f(qo, e, this));
@@ -3210,18 +3210,18 @@ const zm = {
 }, {
   from: (e, t) => Me(Ut(e, t)),
   compare: (e, t) => ku(Ut(e), Ut(t))
-}), [fh, ce, Pc] = Ct(Jn, G(kf, Ce), {
+}), [fh, de, Pc] = Ct(Jn, G(kf, Ce), {
   ...Pr,
   ...Ui
 }, {
   getISOFields: Fr,
   getCalendar: _r,
   with(e, t, n) {
-    return ce(vf($r, e, this, tr(t), n));
+    return de(vf($r, e, this, tr(t), n));
   },
-  withCalendar: (e, t) => ce(fi(e, Ce(t))),
-  add: (e, t, n) => ce(Ls(pn, 0, e, ue(t), n)),
-  subtract: (e, t, n) => ce(Ls(pn, 1, e, ue(t), n)),
+  withCalendar: (e, t) => de(fi(e, Ce(t))),
+  add: (e, t, n) => de(Ls(pn, 0, e, ce(t), n)),
+  subtract: (e, t, n) => de(Ls(pn, 1, e, ce(t), n)),
   until: (e, t, n) => ie(Vs(ht, 0, e, Fe(t), n)),
   since: (e, t, n) => ie(Vs(ht, 1, e, Fe(t), n)),
   equals: (e, t) => qd(e, Fe(t)),
@@ -3229,7 +3229,7 @@ const zm = {
     const n = !Ie(t) || t instanceof Go ? {
       timeZone: t
     } : t;
-    return ve(Pf(se, zt, ae, e, n));
+    return ve(Pf(le, zt, ae, e, n));
   },
   toPlainDateTime: (e, t) => Me(Ff(e, Ai(t))),
   toPlainYearMonth(e) {
@@ -3246,7 +3246,7 @@ const zm = {
   toJSON: (e) => Os(e),
   valueOf: ln
 }, {
-  from: (e, t) => ce(Fe(e, t)),
+  from: (e, t) => de(Fe(e, t)),
   compare: (e, t) => Xn(Fe(e), Fe(t))
 }), Wi = {
   fields(e, t, n) {
@@ -3270,11 +3270,11 @@ const zm = {
   }
 }, vh = /* @__PURE__ */ Object.assign({}, Fc, Gi), mh = /* @__PURE__ */ Object.assign({}, $c, Gi), hh = /* @__PURE__ */ Object.assign({}, xc, Gi), qi = {
   dateAdd(e, t, n, r, o) {
-    return Pc(t.call(e, ce(we(n, e)), ie(de(r)), o));
+    return Pc(t.call(e, de(we(n, e)), ie(fe(r)), o));
   }
 }, Rc = /* @__PURE__ */ Object.assign({}, qi, {
   dateUntil(e, t, n, r, o, a) {
-    return kh(t.call(e, ce(we(n, e)), ce(we(r, e)), Object.assign(/* @__PURE__ */ Object.create(null), a, {
+    return kh(t.call(e, de(we(n, e)), de(we(r, e)), Object.assign(/* @__PURE__ */ Object.create(null), a, {
       largestUnit: Yo[o]
     })));
   }
@@ -3289,8 +3289,8 @@ const zm = {
   with: (e, t) => ie(gf(e, t)),
   negated: (e) => ie(Xa(e)),
   abs: (e) => ie(Nd(e)),
-  add: (e, t, n) => ie(Ys(ir, ht, ae, 0, e, ue(t), n)),
-  subtract: (e, t, n) => ie(Ys(ir, ht, ae, 1, e, ue(t), n)),
+  add: (e, t, n) => ie(Ys(ir, ht, ae, 0, e, ce(t), n)),
+  subtract: (e, t, n) => ie(Ys(ir, ht, ae, 1, e, ce(t), n)),
   round: (e, t) => ie(_d(ir, ht, ae, e, t)),
   total: (e, t) => yd(ir, ht, ae, e, t),
   toLocaleString(e, t, n) {
@@ -3300,15 +3300,15 @@ const zm = {
   toJSON: (e) => Qo(e),
   valueOf: ln
 }, {
-  from: (e) => ie(ue(e)),
-  compare: (e, t, n) => Ud(ir, pn, ae, ue(e), ue(t), n)
+  from: (e) => ie(ce(e)),
+  compare: (e, t, n) => Ud(ir, pn, ae, ce(e), ce(t), n)
 }), Lc = {
   toString: (e) => e.id,
   toJSON: (e) => e.id,
   ...Jm,
-  dateAdd: ({ id: e, o: t }, n, r, o) => ce(we(t.dateAdd(Fe(n), ue(r), o), e)),
-  dateUntil: ({ o: e }, t, n, r) => ie(de(e.dateUntil(Fe(t), Fe(n), fd(r)))),
-  dateFromFields: ({ id: e, o: t }, n, r) => ce(xu(t, n, r, ld(e))),
+  dateAdd: ({ id: e, o: t }, n, r, o) => de(we(t.dateAdd(Fe(n), ce(r), o), e)),
+  dateUntil: ({ o: e }, t, n, r) => ie(fe(e.dateUntil(Fe(t), Fe(n), fd(r)))),
+  dateFromFields: ({ id: e, o: t }, n, r) => de(xu(t, n, r, ld(e))),
   yearMonthFromFields: ({ id: e, o: t }, n, r) => Wt(Ru(t, n, r, id(e))),
   monthDayFromFields: ({ id: e, o: t }, n, r) => Bn(Lu(t, 0, n, r, sd(e))),
   fields({ o: e }, t) {
@@ -3335,7 +3335,7 @@ const zm = {
     const t = Ce(e);
     return typeof t == "string" ? new Xi(t) : t;
   }
-}), Dh = /* @__PURE__ */ Sc(Object.keys(Lc).slice(4)), [Mh, ve] = Ct(sn, G(bf, Ce, se), {
+}), Dh = /* @__PURE__ */ Sc(Object.keys(Lc).slice(4)), [Mh, ve] = Ct(sn, G(bf, Ce, le), {
   ..._c,
   ...Pr,
   ...sl(Ui),
@@ -3352,19 +3352,19 @@ const zm = {
     return ve(df($r, ae, e, this, tr(t), n));
   },
   withCalendar: (e, t) => ve(fi(e, Ce(t))),
-  withTimeZone: (e, t) => ve(Gf(e, se(t))),
+  withTimeZone: (e, t) => ve(Gf(e, le(t))),
   withPlainDate: (e, t) => ve(Uf(ae, e, Fe(t))),
   withPlainTime: (e, t) => ve(zf(ae, e, Ai(t))),
-  add: (e, t, n) => ve(xs(pn, ae, 0, e, ue(t), n)),
-  subtract: (e, t, n) => ve(xs(pn, ae, 1, e, ue(t), n)),
-  until: (e, t, n) => ie(de(zs(ht, ae, 0, e, _n(t), n))),
-  since: (e, t, n) => ie(de(zs(ht, ae, 1, e, _n(t), n))),
+  add: (e, t, n) => ve(xs(pn, ae, 0, e, ce(t), n)),
+  subtract: (e, t, n) => ve(xs(pn, ae, 1, e, ce(t), n)),
+  until: (e, t, n) => ie(fe(zs(ht, ae, 0, e, _n(t), n))),
+  since: (e, t, n) => ie(fe(zs(ht, ae, 1, e, _n(t), n))),
   round: (e, t) => ve(pd(ae, e, t)),
   startOfDay: (e) => ve(Dd(ae, e)),
   equals: (e, t) => Wd(e, _n(t)),
   toInstant: (e) => Pe(Tf(e)),
   toPlainDateTime: (e) => Me(Bu(me, e)),
-  toPlainDate: (e) => ce(Yu(me, e)),
+  toPlainDate: (e) => de(Yu(me, e)),
   toPlainTime: (e) => Vt(Hu(me, e)),
   toPlainYearMonth(e) {
     return Wt(Ef(qo, e, this));
@@ -3387,13 +3387,13 @@ const zm = {
   ...$n({
     timeZoneId: () => Zt(),
     instant: () => Pe(Te(Vr())),
-    zonedDateTime: (e, t = Zt()) => ve(Le(Vr(), se(t), Ce(e))),
-    zonedDateTimeISO: (e = Zt()) => ve(Le(Vr(), se(e), X)),
-    plainDateTime: (e, t = Zt()) => Me(be(or(me(se(t))), Ce(e))),
-    plainDateTimeISO: (e = Zt()) => Me(be(or(me(se(e))), X)),
-    plainDate: (e, t = Zt()) => ce(we(or(me(se(t))), Ce(e))),
-    plainDateISO: (e = Zt()) => ce(we(or(me(se(e))), X)),
-    plainTimeISO: (e = Zt()) => Vt(Dt(or(me(se(e)))))
+    zonedDateTime: (e, t = Zt()) => ve(Le(Vr(), le(t), Ce(e))),
+    zonedDateTimeISO: (e = Zt()) => ve(Le(Vr(), le(e), X)),
+    plainDateTime: (e, t = Zt()) => Me(be(or(me(le(t))), Ce(e))),
+    plainDateTimeISO: (e = Zt()) => Me(be(or(me(le(e))), X)),
+    plainDate: (e, t = Zt()) => de(we(or(me(le(t))), Ce(e))),
+    plainDateISO: (e = Zt()) => de(we(or(me(le(e))), X)),
+    plainTimeISO: (e = Zt()) => Vt(Dt(or(me(le(e)))))
   })
 }), z = /* @__PURE__ */ Object.defineProperties({}, {
   ...Ma("Temporal"),
@@ -3414,7 +3414,7 @@ const zm = {
 Object.create(Intl), $n({
   DateTimeFormat: Ch
 });
-const jc = { hour: 0, minute: 0, second: 0 }, n0 = 60;
+const jc = { hour: 0, minute: 0, second: 0 }, t0 = 60;
 function dl(e) {
   return String(e).padStart(2, "0");
 }
@@ -3453,7 +3453,7 @@ function kt(e, t) {
     }
   return null;
 }
-const r0 = kt;
+const n0 = kt;
 function fl(e, t) {
   if (e == null)
     return null;
@@ -3489,7 +3489,7 @@ function Hc(e) {
   return Ji(e) ? new Date(e.year, e.month - 1, e.day, 12, 0, 0) : Bc(e) ? new Date(e.year, e.month - 1, e.day, e.hour, e.minute, 0) : new Date(e);
 }
 function _h(e = "vuecalendar-nav") {
-  const t = W("next"), n = O(() => `${e}-${t.value}`);
+  const t = W("next"), n = _(() => `${e}-${t.value}`);
   return {
     navDirection: t,
     navTransition: n,
@@ -3546,14 +3546,14 @@ const jh = ({ modelValue: e, locale: t, emit: n }) => {
   nt(e, (m) => {
     o.value = m ? z.PlainDate.from(m.toISOString().slice(0, 10)) : Pt();
   });
-  const a = O(() => e.value ? new Intl.DateTimeFormat(t.value, {
+  const a = _(() => e.value ? new Intl.DateTimeFormat(t.value, {
     day: "2-digit",
     month: "2-digit",
     year: "numeric"
-  }).format(e.value) : ""), s = O(() => Ac(o.value, t.value)), i = O(() => {
+  }).format(e.value) : ""), s = _(() => Ac(o.value, t.value)), i = _(() => {
     const m = Fn(Pt());
     return Array.from({ length: 7 }, (y, b) => zc(m.add({ days: b }), t.value));
-  }), l = O(() => {
+  }), l = _(() => {
     const m = o.value.with({ day: 1 }), y = Fn(m), b = Fn(m.with({ day: m.daysInMonth })).add({ days: 6 }), w = Pt(), C = e.value ? z.PlainDate.from(e.value.toISOString().slice(0, 10)) : null, D = [];
     for (let k = y; z.PlainDate.compare(k, b) <= 0; k = k.add({ days: 1 }))
       D.push({
@@ -3717,7 +3717,7 @@ function ka(e = "00:00") {
   const [t = "0", n = "0"] = String(e).split(":"), r = Number(t), o = Number(n);
   return !Number.isFinite(r) || !Number.isFinite(o) ? 0 : r * Rt + o;
 }
-function le(e) {
+function ue(e) {
   return !e || e.length < 16 ? 0 : ka(e.slice(11, 16));
 }
 function ia(e) {
@@ -3872,10 +3872,10 @@ function ry(e, t) {
     const o = t.get(r.toString()) ?? [];
     if (o.length === 0)
       continue;
-    const a = [...o].sort((u, c) => le(u.start) - le(c.start)), s = [];
+    const a = [...o].sort((u, c) => ue(u.start) - ue(c.start)), s = [];
     let i = [], l = 0;
     for (const u of a) {
-      const c = le(u.start), d = le(u.end);
+      const c = ue(u.start), d = ue(u.end);
       if (i.length === 0 || c < l) {
         i.push(u), l = Math.max(l, d);
         continue;
@@ -3898,10 +3898,10 @@ function oy(e, t, n) {
       const i = lo(a, s.id), l = n.get(i) ?? [];
       if (l.length === 0)
         continue;
-      const u = [...l].sort((v, m) => le(v.start) - le(m.start)), c = [];
+      const u = [...l].sort((v, m) => ue(v.start) - ue(m.start)), c = [];
       let d = [], f = 0;
       for (const v of u) {
-        const m = le(v.start), y = le(v.end);
+        const m = ue(v.start), y = ue(v.end);
         if (d.length === 0 || m < f) {
           d.push(v), f = Math.max(f, y);
           continue;
@@ -3918,7 +3918,7 @@ function oy(e, t, n) {
 function Uc(e, t) {
   const n = [], r = /* @__PURE__ */ new Map();
   for (const a of e) {
-    const s = le(a.start), i = le(a.end);
+    const s = ue(a.start), i = ue(a.end);
     let l = n.findIndex((u) => u <= s);
     l === -1 && (l = n.length), n[l] = i, r.set(a.id, l);
   }
@@ -3940,7 +3940,7 @@ function ay({
     var l;
     if (o !== null && a.id === o || !((l = a.start) != null && l.startsWith(t)))
       return !1;
-    const s = le(a.start), i = le(a.end);
+    const s = ue(a.start), i = ue(a.end);
     return n < i && r > s;
   });
 }
@@ -3957,17 +3957,17 @@ const ly = ({
   totalCols: a,
   offsetMinutes: s
 }) => {
-  const i = O(() => {
+  const i = _(() => {
     var m;
     return ((m = t.value) == null ? void 0 : m.lightColors) ?? {
       main: "#9ca3af",
       container: "#f3f4f6",
       onContainer: "#374151"
     };
-  }), l = O(() => le(e.value.start)), u = O(() => le(e.value.end)), c = O(() => Math.max((u.value - l.value) / 60 * n.value, hl)), d = O(() => Math.min(
+  }), l = _(() => ue(e.value.start)), u = _(() => ue(e.value.end)), c = _(() => Math.max((u.value - l.value) / 60 * n.value, hl)), d = _(() => Math.min(
     Math.max(0, (s.value - l.value) / 60 * n.value),
     Math.max(c.value - hl, 0)
-  )), f = O(() => {
+  )), f = _(() => {
     const m = a.value > 1, y = m ? iy : 0, b = Math.max(1, Math.min(Number(r.value) || 100, 100)) / 100, w = (m ? sy(a.value) : 100) * b, C = m ? o.value * y : 0;
     return {
       top: `${(l.value - s.value) / 60 * n.value}px`,
@@ -4154,13 +4154,13 @@ const ly = ({
 }) => {
   const f = W(null), v = W(0);
   let m = null;
-  const y = O(() => Xh(e.value)), b = O(() => y.value.start), w = O(() => y.value.end), C = O(() => y.value.duration), D = O(() => y.value.isFullDay), k = O(() => {
+  const y = _(() => Xh(e.value)), b = _(() => y.value.start), w = _(() => y.value.end), C = _(() => y.value.duration), D = _(() => y.value.isFullDay), k = _(() => {
     const Y = Number(t.value);
     return Number.isFinite(Y) ? wa(Y, 0.5, 2.5) : 1;
-  }), p = O(() => Ft(s.value)), T = O(() => {
+  }), p = _(() => Ft(s.value)), T = _(() => {
     const Y = Number(o.value);
     return Number.isFinite(Y) && Y > 0 ? Y : null;
-  }), B = O(() => {
+  }), B = _(() => {
     const Y = {
       hour: "numeric",
       ...i.value ?? {}
@@ -4169,7 +4169,7 @@ const ly = ({
       ...Y,
       minute: "2-digit"
     } : Y;
-  }), I = O(() => r.value ? b.value === 0 && C.value >= 1439 : !1), x = O(() => {
+  }), I = _(() => r.value ? b.value === 0 && C.value >= 1439 : !1), x = _(() => {
     if (T.value) {
       const He = C.value / 60;
       return He <= 0 ? sa : T.value / He;
@@ -4181,7 +4181,7 @@ const ly = ({
       return sa;
     const ct = v.value / Y;
     return I.value ? ct * k.value : ct;
-  }), U = O(() => T.value ? T.value : C.value / 60 * x.value), K = O(() => D.value ? U.value > v.value + 1 : !1), ye = O(() => Kh({
+  }), U = _(() => T.value ? T.value : C.value / 60 * x.value), K = _(() => D.value ? U.value > v.value + 1 : !1), ye = _(() => Kh({
     start: b.value,
     end: w.value,
     hourHeight: x.value,
@@ -4189,12 +4189,12 @@ const ly = ({
     locale: l.value,
     formatOptions: B.value,
     step: p.value
-  })), ne = O(() => Jh({
+  })), ne = _(() => Jh({
     start: b.value,
     end: w.value,
     hourHeight: x.value,
     step: p.value
-  })), Ye = O(() => ey(u.value)), Ge = O(() => ny(c.value, u.value)), ut = O(() => Ge.value.length === 0 ? 0 : Math.max(...Ge.value.map((Y) => Y.row)) + 1), Bt = O(() => ry(c.value, Ye.value)), Et = (Y) => (Y - b.value) / 60 * x.value, un = (Y) => Y / 60 * x.value, Yt = (Y) => Y / x.value * 60 + b.value, It = (Y, ct, He) => wa(Y, ct, He), Ot = (Y) => Ye.value.get(Y.toString()) ?? [], ge = () => {
+  })), Ye = _(() => ey(u.value)), Ge = _(() => ny(c.value, u.value)), ut = _(() => Ge.value.length === 0 ? 0 : Math.max(...Ge.value.map((Y) => Y.row)) + 1), Bt = _(() => ry(c.value, Ye.value)), Et = (Y) => (Y - b.value) / 60 * x.value, un = (Y) => Y / 60 * x.value, Yt = (Y) => Y / x.value * 60 + b.value, It = (Y, ct, He) => wa(Y, ct, He), Ot = (Y) => Ye.value.get(Y.toString()) ?? [], ge = () => {
     var Y;
     v.value = ((Y = f.value) == null ? void 0 : Y.clientHeight) ?? 0;
   }, et = () => {
@@ -4317,12 +4317,12 @@ const sr = 60, Zr = { container: "#fee2e2", main: "#ef4444", onContainer: "#991b
       return 0;
     const R = v.value.getBoundingClientRect(), L = M - R.left - m, J = (R.width - m) / e.value.length;
     return C(Math.floor(L / J), 0, e.value.length - 1);
-  }, ne = (M, R, L, J = null) => i.value ? !1 : ay({ events: t.value, dayKey: M, start: R, end: L, skipId: J }), Ye = O(() => {
+  }, ne = (M, R, L, J = null) => i.value ? !1 : ay({ events: t.value, dayKey: M, start: R, end: L, skipId: J }), Ye = _(() => {
     if (!k.active || !k.dayStr)
       return !1;
     const M = Math.min(k.startMin, k.endMin), R = Math.max(k.startMin, k.endMin);
     return ne(k.dayStr, M, R);
-  }), Ge = O(() => {
+  }), Ge = _(() => {
     if (!p.active || !p.event)
       return !1;
     const M = e.value[p.currentDayIndex];
@@ -4332,7 +4332,7 @@ const sr = 60, Zr = { container: "#fee2e2", main: "#ef4444", onContainer: "#991b
       p.currentStartMin + p.durationMin,
       p.event.id
     ) : !1;
-  }), ut = O(() => !T.active || !T.event || !T.dayStr ? !1 : ne(T.dayStr, T.startMin, T.endMin, T.event.id)), Bt = O(() => {
+  }), ut = _(() => !T.active || !T.event || !T.dayStr ? !1 : ne(T.dayStr, T.startMin, T.endMin, T.event.id)), Bt = _(() => {
     if (!k.active)
       return {};
     const M = Math.min(k.startMin, k.endMin), R = Math.max(k.startMin, k.endMin), L = Ye.value ? Zr : x(r.value);
@@ -4343,7 +4343,7 @@ const sr = 60, Zr = { container: "#fee2e2", main: "#ef4444", onContainer: "#991b
       minHeight: 16,
       transition: "height 0.05s ease, background 0.15s ease, border-color 0.15s ease"
     });
-  }), Et = O(() => {
+  }), Et = _(() => {
     if (!p.active || !p.event)
       return {};
     const M = Ge.value ? Zr : x(p.event.calendarId);
@@ -4353,10 +4353,10 @@ const sr = 60, Zr = { container: "#fee2e2", main: "#ef4444", onContainer: "#991b
       colors: M,
       transition: "background 0.15s ease, border-color 0.15s ease"
     });
-  }), un = O(() => !p.active || !p.event ? {} : {
+  }), un = _(() => !p.active || !p.event ? {} : {
     top: `${b(p.originalStartMin)}px`,
     height: `${Math.max(w(p.durationMin), 20)}px`
-  }), Yt = O(() => {
+  }), Yt = _(() => {
     if (!T.active || !T.event)
       return {};
     const M = ut.value ? Zr : x(T.event.calendarId);
@@ -4366,7 +4366,7 @@ const sr = 60, Zr = { container: "#fee2e2", main: "#ef4444", onContainer: "#991b
       colors: M,
       opacity: 0.7
     });
-  }), It = O(() => {
+  }), It = _(() => {
     if (!B.visible)
       return {};
     const M = B.blocked ? Zr : x(o.value.calendarId);
@@ -4381,7 +4381,7 @@ const sr = 60, Zr = { container: "#fee2e2", main: "#ef4444", onContainer: "#991b
   }), Ot = (M) => {
     var R, L;
     return p.active && ((R = p.event) == null ? void 0 : R.id) === M || T.active && ((L = T.event) == null ? void 0 : L.id) === M;
-  }, ge = O(() => Ft(l.value)), et = O(() => Ft(u.value)), Y = (M) => {
+  }, ge = _(() => Ft(l.value)), et = _(() => Ft(u.value)), Y = (M) => {
     I.eventId = M, I.until = Date.now() + py;
   }, ct = (M) => I.eventId === M && Date.now() <= I.until ? (I.eventId = null, I.until = 0, !1) : !0, He = (M) => ml(M, ge.value), In = (M) => ml(M, et.value), pe = (M) => {
     var qe, Ht;
@@ -4482,7 +4482,7 @@ const sr = 60, Zr = { container: "#fee2e2", main: "#ef4444", onContainer: "#991b
       if (M.button !== 0 || !s.value)
         return;
       M.preventDefault();
-      const J = le(R.start), re = le(R.end), Ne = e.value.findIndex((qe) => qe.toString() === L.toString());
+      const J = ue(R.start), re = ue(R.end), Ne = e.value.findIndex((qe) => qe.toString() === L.toString());
       Object.assign(p, {
         active: !0,
         engaged: !1,
@@ -4504,9 +4504,9 @@ const sr = 60, Zr = { container: "#fee2e2", main: "#ef4444", onContainer: "#991b
         engaged: !1,
         event: R,
         dayStr: L.toString(),
-        startMin: le(R.start),
-        endMin: le(R.end),
-        originalEndMin: le(R.end),
+        startMin: ue(R.start),
+        endMin: ue(R.end),
+        originalEndMin: ue(R.end),
         startClientY: M.clientY,
         startPointerMin: y(K(M.clientY))
       }));
@@ -4641,7 +4641,7 @@ const sr = 60, Zr = { container: "#fee2e2", main: "#ef4444", onContainer: "#991b
   },
   emits: ["event-click", "event-dblclick", "event-update", "draw-event", "slot-click", "update:savedScrollTop"],
   setup(e, { expose: t, emit: n }) {
-    const r = e, o = n, a = O(() => {
+    const r = e, o = n, a = _(() => {
       const j = Number(r.gridHeight);
       return Number.isFinite(j) && j > 0;
     }), {
@@ -4675,7 +4675,7 @@ const sr = 60, Zr = { container: "#fee2e2", main: "#ef4444", onContainer: "#991b
       events: F(r, "events"),
       days: F(r, "days"),
       onSaveScrollTop: (j) => o("update:savedScrollTop", j)
-    }), B = O(() => m.value > 0 ? m.value * la + Math.max(0, m.value - 1) * yl + gl * 2 : 0), {
+    }), B = _(() => m.value > 0 ? m.value * la + Math.max(0, m.value - 1) * yl + gl * 2 : 0), {
       draw: I,
       drag: x,
       resize: U,
@@ -5010,7 +5010,7 @@ const sr = 60, Zr = { container: "#fee2e2", main: "#ef4444", onContainer: "#991b
       ], 42, Oy)
     ]));
   }
-}, xy = (e) => O(() => {
+}, xy = (e) => _(() => {
   var n;
   const t = /* @__PURE__ */ new Map();
   for (const r of e.value ?? []) {
@@ -5019,10 +5019,10 @@ const sr = 60, Zr = { container: "#fee2e2", main: "#ef4444", onContainer: "#991b
   }
   return t;
 }), Ry = ({ year: e, month: t, locale: n, events: r, calendars: o, maxVisible: a }) => {
-  const s = xy(r ?? O(() => [])), i = O(() => {
+  const s = xy(r ?? _(() => [])), i = _(() => {
     const v = Fn(Pt());
     return Array.from({ length: 7 }, (m, y) => zc(v.add({ days: y }), n.value));
-  }), l = O(() => {
+  }), l = _(() => {
     const v = z.PlainDate.from({
       year: e.value,
       month: t.value,
@@ -5107,7 +5107,7 @@ const sr = 60, Zr = { container: "#fee2e2", main: "#ef4444", onContainer: "#991b
       },
       { immediate: !0 }
     );
-    const d = O(() => {
+    const d = _(() => {
       try {
         return z.PlainDate.from(c.value);
       } catch {
@@ -5117,7 +5117,7 @@ const sr = 60, Zr = { container: "#fee2e2", main: "#ef4444", onContainer: "#991b
           day: 1
         });
       }
-    }), f = O(() => s(d.value)), v = (w) => s(w).slice(0, 4), m = (w) => ({ background: u(w).borderLeft.replace("3px solid ", "") }), y = (w) => {
+    }), f = _(() => s(d.value)), v = (w) => s(w).slice(0, 4), m = (w) => ({ background: u(w).borderLeft.replace("3px solid ", "") }), y = (w) => {
       const C = kt(w.start), D = kt(w.end);
       if (!C || !D)
         return "";
@@ -5214,17 +5214,17 @@ const sr = 60, Zr = { container: "#fee2e2", main: "#ef4444", onContainer: "#991b
     ], 2));
   }
 }, Wy = ({ date: e, events: t, calendars: n, locale: r }) => {
-  const o = O(() => new Intl.DateTimeFormat(r.value, {
+  const o = _(() => new Intl.DateTimeFormat(r.value, {
     weekday: "long",
     month: "long",
     day: "numeric",
     year: "numeric",
     timeZone: "UTC"
-  }).format(new Date(Date.UTC(e.value.year, e.value.month - 1, e.value.day)))), a = O(() => new Intl.DateTimeFormat(r.value, {
+  }).format(new Date(Date.UTC(e.value.year, e.value.month - 1, e.value.day)))), a = _(() => new Intl.DateTimeFormat(r.value, {
     hour: "numeric",
     minute: "2-digit",
     timeZone: "UTC"
-  })), s = O(() => t.value.map((l) => Gy(l, e.value, a.value)).filter(Boolean).sort((l, u) => l.sortGroup !== u.sortGroup ? l.sortGroup - u.sortGroup : l.sortMinutes !== u.sortMinutes ? l.sortMinutes - u.sortMinutes : String(l.event.title ?? "").localeCompare(String(u.event.title ?? ""))));
+  })), s = _(() => t.value.map((l) => Gy(l, e.value, a.value)).filter(Boolean).sort((l, u) => l.sortGroup !== u.sortGroup ? l.sortGroup - u.sortGroup : l.sortMinutes !== u.sortMinutes ? l.sortMinutes - u.sortMinutes : String(l.event.title ?? "").localeCompare(String(u.event.title ?? ""))));
   return {
     dayLabel: o,
     items: s,
@@ -5326,19 +5326,19 @@ const qy = { class: "vuecalendar-list" }, Xy = { class: "vuecalendar-list__heade
     ]));
   }
 }, og = ({ resources: e, ...t }) => {
-  const n = Vc(t), r = O(() => {
+  const n = Vc(t), r = _(() => {
     var l;
     return Math.max(1, ((l = e.value) == null ? void 0 : l.length) ?? 0);
-  }), o = O(() => n.boundaryRange.value ? (t.days.value ?? []).flatMap((l, u) => (e.value ?? []).map((c, d) => ({
+  }), o = _(() => n.boundaryRange.value ? (t.days.value ?? []).flatMap((l, u) => (e.value ?? []).map((c, d) => ({
     key: lo(l.toString(), c.id),
     day: l,
     dayIndex: u,
     resource: c,
     resourceIndex: d
-  }))) : []), a = O(() => ty(
+  }))) : []), a = _(() => ty(
     t.events.value,
     e.value
-  )), s = O(() => oy(
+  )), s = _(() => oy(
     t.days.value,
     e.value,
     a.value
@@ -5387,7 +5387,7 @@ const qy = { class: "vuecalendar-list" }, Xy = { class: "vuecalendar-list__heade
   },
   emits: ["event-click", "event-dblclick"],
   setup(e, { emit: t }) {
-    const n = e, r = t, o = O(() => {
+    const n = e, r = t, o = _(() => {
       const T = Number(n.gridHeight);
       return Number.isFinite(T) && T > 0;
     }), {
@@ -5407,7 +5407,7 @@ const qy = { class: "vuecalendar-list" }, Xy = { class: "vuecalendar-list__heade
     } = og({
       dayBoundaries: F(n, "dayBoundaries"),
       zoomLevel: F(n, "zoomLevel"),
-      savedScrollTop: O(() => -1),
+      savedScrollTop: _(() => -1),
       fitFullDayHeight: F(n, "fitFullDayHeight"),
       gridHeight: F(n, "gridHeight"),
       workdayStart: F(n, "workdayStart"),
@@ -5419,7 +5419,7 @@ const qy = { class: "vuecalendar-list" }, Xy = { class: "vuecalendar-list__heade
       resources: F(n, "resources"),
       onSaveScrollTop: () => {
       }
-    }), C = O(() => ({
+    }), C = _(() => ({
       gridTemplateColumns: `repeat(${n.days.length * y.value}, minmax(0, 1fr))`
     })), D = C, k = (T) => n.calendars[T.calendarId] ?? {}, p = (T) => {
       const B = (T == null ? void 0 : T.lightColors) ?? {
@@ -5566,7 +5566,7 @@ const qy = { class: "vuecalendar-list" }, Xy = { class: "vuecalendar-list__heade
   pt: { today: "Hoje", datePickerPlaceholder: "Ir para a data", sidebarDragHint: "Arrastar para o calendario", viewDay: "Dia", viewWeek: "Semana", viewMonth: "Mes", viewList: "Lista", blocked: "Ocupado", more: "mais", noEvents: "Sem eventos" },
   it: { today: "Oggi", datePickerPlaceholder: "Vai alla data", sidebarDragHint: "Trascina nel calendario", viewDay: "Giorno", viewWeek: "Settimana", viewMonth: "Mese", viewList: "Lista", blocked: "Occupato", more: "altro", noEvents: "Nessun evento" },
   zh: { today: "今天", datePickerPlaceholder: "前往日期", sidebarDragHint: "拖到日历", viewDay: "日", viewWeek: "周", viewMonth: "月", viewList: "列表", blocked: "已占用", more: "更多", noEvents: "没有日程" }
-}, dg = (e, t) => O(() => {
+}, dg = (e, t) => _(() => {
   var r;
   return {
     ...Ur[e.value] ?? Ur.en,
@@ -5574,15 +5574,15 @@ const qy = { class: "vuecalendar-list" }, Xy = { class: "vuecalendar-list__heade
     ...t.value ?? {}
   };
 }), fg = ({ initialDate: e, initialView: t, currentView: n, isMobile: r, nDays: o, locale: a, onNavigate: s }) => {
-  const i = (I) => `${I.getFullYear()}-${String(I.getMonth() + 1).padStart(2, "0")}-${String(I.getDate()).padStart(2, "0")}`, l = W(e ? z.PlainDate.from(e) : Pt()), u = n ?? W(r.value ? "day" : t), c = W(null), d = O(() => {
+  const i = (I) => `${I.getFullYear()}-${String(I.getMonth() + 1).padStart(2, "0")}-${String(I.getDate()).padStart(2, "0")}`, l = W(e ? z.PlainDate.from(e) : Pt()), u = n ?? W(r.value ? "day" : t), c = W(null), d = _(() => {
     const I = Number((o == null ? void 0 : o.value) ?? 7);
     return Number.isFinite(I) ? Math.max(1, Math.min(7, Math.trunc(I))) : 7;
-  }), f = O(() => {
+  }), f = _(() => {
     if (u.value === "day" || u.value === "list")
       return [l.value];
     const I = Fn(l.value);
     return Array.from({ length: d.value }, (x, U) => I.add({ days: U }));
-  }), v = O(() => {
+  }), v = _(() => {
     const I = a.value;
     if (u.value === "day" || u.value === "list")
       return r.value ? vl(l.value, I) : Lh(l.value, I);
@@ -5591,7 +5591,7 @@ const qy = { class: "vuecalendar-list" }, Xy = { class: "vuecalendar-list__heade
       return r.value ? `${oa(x, I)} - ${oa(U, I)}` : `${l.value.weekOfYear} - ${oa(x, I)} - ${vl(U, I)}`;
     }
     return Ac(l.value, I);
-  }), m = O(() => {
+  }), m = _(() => {
     var I;
     return `${["day", "list"].includes(u.value) ? u.value : "week"}-${(I = f.value[0]) == null ? void 0 : I.toString()}-${d.value}`;
   }), y = () => ({
@@ -5682,7 +5682,7 @@ const qy = { class: "vuecalendar-list" }, Xy = { class: "vuecalendar-list__heade
     (s = e.get(o)) == null || s.delete(a);
   } };
 }, hg = (e, t) => {
-  const n = typeof window < "u", r = mn({ active: !1, calendarId: null }), o = mn({ x: 0, y: 0 }), a = O(() => r.calendarId ? e.value[r.calendarId] ?? null : null), s = () => {
+  const n = typeof window < "u", r = mn({ active: !1, calendarId: null }), o = mn({ x: 0, y: 0 }), a = _(() => r.calendarId ? e.value[r.calendarId] ?? null : null), s = () => {
     if (!n) {
       Object.assign(r, { active: !1, calendarId: null });
       return;
@@ -5721,7 +5721,7 @@ const qy = { class: "vuecalendar-list" }, Xy = { class: "vuecalendar-list__heade
 }), yg = ({ plugins: e, calendarApi: t, onRender: n }) => {
   const r = W({ ...wl });
   let o = null;
-  const a = O(() => e.value.find((i) => (i == null ? void 0 : i.name) === "eventModal") ?? null), s = O(() => {
+  const a = _(() => e.value.find((i) => (i == null ? void 0 : i.name) === "eventModal") ?? null), s = _(() => {
     const i = a.value;
     return {
       open: r.value.open,
@@ -5772,7 +5772,7 @@ const qy = { class: "vuecalendar-list" }, Xy = { class: "vuecalendar-list__heade
     eventModalSlotProps: s
   };
 }, gg = ({ calendars: e, events: t }) => {
-  const n = W(/* @__PURE__ */ new Set()), r = O(() => [...n.value]), o = O(() => n.value.size > 0), a = O(() => t.value.filter((d) => !n.value.has(d.calendarId))), s = (d) => typeof d == "string" && n.value.has(d), i = (d) => {
+  const n = W(/* @__PURE__ */ new Set()), r = _(() => [...n.value]), o = _(() => n.value.size > 0), a = _(() => t.value.filter((d) => !n.value.has(d.calendarId))), s = (d) => typeof d == "string" && n.value.has(d), i = (d) => {
     typeof d == "string" && (n.value = new Set(n.value).add(d));
   }, l = (d) => {
     if (typeof d != "string" || !n.value.has(d))
@@ -5886,7 +5886,7 @@ const qy = { class: "vuecalendar-list" }, Xy = { class: "vuecalendar-list__heade
   },
   emits: ["range-update", "event-click", "event-dblclick", "event-update", "slot-click"],
   setup(e, { expose: t, emit: n }) {
-    const r = e, o = n, a = W(null), s = W(null), i = W(null), l = W([]), u = W(-1), c = W(null), d = W(!1), f = W(!1), v = W(!0), m = W(1), y = W(null), b = W(null), { navTransition: w, setNavDirection: C } = _h(), D = mg(), k = W(r.initialView), { isMobile: p } = vg(a, k, r.initialView), T = O(() => r.resources.length > 0), B = O(() => r.eventOverlap ?? r.allowOverlap), I = O(() => y.value ?? Ft(r.gridStep)), x = O(() => b.value ?? Ft(r.gridStep)), {
+    const r = e, o = n, a = W(null), s = W(null), i = W(null), l = W([]), u = W(-1), c = W(null), d = W(!1), f = W(!1), v = W(!0), m = W(1), y = W(null), b = W(null), { navTransition: w, setNavDirection: C } = _h(), D = mg(), k = W(r.initialView), { isMobile: p } = vg(a, k, r.initialView), T = _(() => r.resources.length > 0), B = _(() => r.eventOverlap ?? r.allowOverlap), I = _(() => y.value ?? Ft(r.gridStep)), x = _(() => b.value ?? Ft(r.gridStep)), {
       currentDate: U,
       datePicker: K,
       visibleDays: ye,
@@ -5927,12 +5927,12 @@ const qy = { class: "vuecalendar-list" }, Xy = { class: "vuecalendar-list__heade
     } = gg({
       calendars: F(r, "calendars"),
       events: l
-    }), $ = O(() => {
+    }), $ = _(() => {
       const N = r.sidebarCalendarIds.length > 0 ? r.sidebarCalendarIds : Object.keys(r.calendars);
       return Object.fromEntries(
-        N.map((_) => [_, r.calendars[_]]).filter(([, _]) => !!_)
+        N.map((O) => [O, r.calendars[O]]).filter(([, O]) => !!O)
       );
-    }), _e = O(() => T.value ? [{ key: "resource", label: pe.value.viewResource }] : [
+    }), _e = _(() => T.value ? [{ key: "resource", label: pe.value.viewResource }] : [
       { key: "day", label: pe.value.viewDay },
       { key: "week", label: pe.value.viewWeek },
       { key: "month", label: pe.value.viewMonth },
@@ -5946,8 +5946,8 @@ const qy = { class: "vuecalendar-list" }, Xy = { class: "vuecalendar-list__heade
     }), nt($, (N) => {
       if (!i.value || N[i.value])
         return;
-      const [_] = Object.keys(N);
-      i.value = _ ?? null;
+      const [O] = Object.keys(N);
+      i.value = O ?? null;
     }), nt(T, (N) => {
       if (N) {
         k.value = "resource";
@@ -5957,8 +5957,8 @@ const qy = { class: "vuecalendar-list" }, Xy = { class: "vuecalendar-list__heade
     }, { immediate: !0 }), nt(k, (N) => {
       N === "resource" && !T.value && (k.value = "week");
     }), nt([k, Ye], async () => {
-      var N, _;
-      !c.value || k.value !== "week" && k.value !== "day" || (await ed(), (_ = (N = s.value) == null ? void 0 : N.scrollToTime) != null && _.call(N, c.value) && (c.value = null));
+      var N, O;
+      !c.value || k.value !== "week" && k.value !== "day" || (await ed(), (O = (N = s.value) == null ? void 0 : N.scrollToTime) != null && O.call(N, c.value) && (c.value = null));
     }, { flush: "post" });
     const M = (N) => ({
       ...N,
@@ -5967,18 +5967,18 @@ const qy = { class: "vuecalendar-list" }, Xy = { class: "vuecalendar-list__heade
     }), R = (N) => {
       l.value = (N ?? []).map(M);
     }, L = (N) => {
-      l.value = l.value.filter((_) => _.id !== N);
+      l.value = l.value.filter((O) => O.id !== N);
     }, J = () => l.value, re = (N) => {
       var P;
       if (c.value = N, k.value !== "week" && k.value !== "day" || !((P = s.value) != null && P.scrollToTime))
         return !1;
-      const _ = s.value.scrollToTime(N);
-      return _ && (c.value = null), _;
+      const O = s.value.scrollToTime(N);
+      return O && (c.value = null), O;
     }, Ne = () => {
-      var N, _;
-      return ((_ = (N = s.value) == null ? void 0 : N.getScrollTop) == null ? void 0 : _.call(N)) ?? u.value;
+      var N, O;
+      return ((O = (N = s.value) == null ? void 0 : N.getScrollTop) == null ? void 0 : O.call(N)) ?? u.value;
     }, qe = () => m.value, Ht = (N) => {
-      const _ = Number(N), P = Number.isFinite(_) ? Math.min(2.5, Math.max(0.5, _)) : 1;
+      const O = Number(N), P = Number.isFinite(O) ? Math.min(2.5, Math.max(0.5, O)) : 1;
       return m.value = P, D.emit("zoom-update", P), P;
     }, ns = (N = 0.25) => Ht(m.value + N), rs = (N = 0.25) => Ht(m.value - N), os = () => Ht(1), as = () => {
       f.value = !0;
@@ -5988,19 +5988,20 @@ const qy = { class: "vuecalendar-list" }, Xy = { class: "vuecalendar-list__heade
       v.value = !0;
     }, ls = () => {
       v.value = !1;
-    }, us = () => I.value, cs = (N) => (y.value = Ft(N), I.value), ds = () => (y.value = null, I.value), fs = () => x.value, vs = (N) => (b.value = Ft(N), x.value), ms = () => (b.value = null, x.value), At = (N, _) => {
-      o(N, _), D.emit(N, _);
-    }, Kc = (N, _) => {
-      D.emit(N, _);
+    }, us = () => I.value, cs = (N) => (y.value = Ft(N), I.value), ds = () => (y.value = null, I.value), fs = () => x.value, vs = (N) => (b.value = Ft(N), x.value), ms = () => (b.value = null, x.value), At = (N, O) => {
+      o(N, O), D.emit(N, O);
+    }, Kc = (N, O) => {
+      D.emit(N, O);
     };
-    let hs = 0, ys = !1;
-    nt([U, k], async () => {
-      const N = Ot();
-      if (ys ? (o("range-update", N), D.emit("range-update", N)) : ys = !0, !r.fetchEvents)
+    let hs = 0;
+    const ys = async ({ emitRangeUpdate: N = !0 } = {}) => {
+      const O = Ot();
+      if (N && (o("range-update", O), D.emit("range-update", O)), !r.fetchEvents)
         return;
-      const _ = ++hs, P = await r.fetchEvents(N);
-      _ !== hs || !Array.isArray(P) || R(P);
-    }, { immediate: !0 });
+      const P = ++hs, se = await r.fetchEvents(O);
+      P !== hs || !Array.isArray(se) || R(se);
+    };
+    ys({ emitRangeUpdate: !1 }), nt([U, k], () => ys());
     const gs = {
       setDate: Yt,
       setView: It,
@@ -6089,7 +6090,7 @@ const qy = { class: "vuecalendar-list" }, Xy = { class: "vuecalendar-list__heade
       showCalendar: Rr,
       toggleCalendarVisibility: j,
       showAllCalendars: V
-    }), (N, _) => (S(), E(q, null, [
+    }), (N, O) => (S(), E(q, null, [
       g("div", Kr({
         ref_key: "calendarRootEl",
         ref: a,
@@ -6097,31 +6098,31 @@ const qy = { class: "vuecalendar-list" }, Xy = { class: "vuecalendar-list__heade
       }, N.$attrs), [
         e.showSidebar && !h(p) && !N.$slots.sidebar ? (S(), E("aside", pg, [
           g("div", bg, [
-            (S(!0), E(q, null, te($.value, (P, fe) => (S(), E("div", {
-              key: fe,
+            (S(!0), E(q, null, te($.value, (P, se) => (S(), E("div", {
+              key: se,
               class: Se(["vuecalendar__sidebar-item", {
-                "vuecalendar__sidebar-item--active": i.value === fe,
-                "vuecalendar__sidebar-item--draggable": d.value && !h(tt)(fe),
-                "vuecalendar__sidebar-item--hidden": h(tt)(fe)
+                "vuecalendar__sidebar-item--active": i.value === se,
+                "vuecalendar__sidebar-item--draggable": d.value && !h(tt)(se),
+                "vuecalendar__sidebar-item--hidden": h(tt)(se)
               }]),
               style: A({
                 "--ht-sidebar-accent": P.lightColors.main,
                 "--ht-sidebar-container": P.lightColors.container,
                 "--ht-sidebar-on-container": P.lightColors.onContainer,
-                ...i.value === fe ? {
+                ...i.value === se ? {
                   background: P.lightColors.container,
                   color: P.lightColors.onContainer
                 } : {}
               }),
-              onClick: (Jo) => i.value = fe,
-              onMousedown: (Jo) => d.value && !h(tt)(fe) ? h(ct)(Jo, fe) : void 0
+              onClick: (Jo) => i.value = se,
+              onMousedown: (Jo) => d.value && !h(tt)(se) ? h(ct)(Jo, se) : void 0
             }, [
               Ae(N.$slots, "sidebar-item", {
-                id: fe,
+                id: se,
                 calendar: P,
-                isSelected: i.value === fe,
-                isHidden: h(tt)(fe),
-                toggleVisibility: () => h(j)(fe)
+                isSelected: i.value === se,
+                isHidden: h(tt)(se),
+                toggleVisibility: () => h(j)(se)
               }, () => [
                 g("span", {
                   class: "vuecalendar__sidebar-dot",
@@ -6131,19 +6132,19 @@ const qy = { class: "vuecalendar-list" }, Xy = { class: "vuecalendar-list__heade
                 g("button", {
                   class: "vuecalendar__sidebar-visibility",
                   type: "button",
-                  title: h(tt)(fe) ? "Show calendar" : "Hide calendar",
-                  "aria-label": h(tt)(fe) ? "Show calendar" : "Hide calendar",
-                  "aria-pressed": !h(tt)(fe),
-                  onMousedown: _[0] || (_[0] = yt(() => {
+                  title: h(tt)(se) ? "Show calendar" : "Hide calendar",
+                  "aria-label": h(tt)(se) ? "Show calendar" : "Hide calendar",
+                  "aria-pressed": !h(tt)(se),
+                  onMousedown: O[0] || (O[0] = yt(() => {
                   }, ["stop"])),
-                  onClick: yt((Jo) => h(j)(fe), ["stop"])
+                  onClick: yt((Jo) => h(j)(se), ["stop"])
                 }, [
-                  h(tt)(fe) ? (S(), E("svg", Mg, [..._[17] || (_[17] = [
+                  h(tt)(se) ? (S(), E("svg", Mg, [...O[17] || (O[17] = [
                     g("path", { d: "M17.94 17.94A10.94 10.94 0 0 1 12 20C7 20 2.73 16.89 1 12c.92-2.6 2.62-4.79 4.88-6.32" }, null, -1),
                     g("path", { d: "M10.58 10.58a2 2 0 0 0 2.83 2.83" }, null, -1),
                     g("path", { d: "M9.88 5.09A10.94 10.94 0 0 1 12 4c5 0 9.27 3.11 11 8a11.83 11.83 0 0 1-4.09 5.09" }, null, -1),
                     g("path", { d: "M1 1l22 22" }, null, -1)
-                  ])])) : (S(), E("svg", Sg, [..._[18] || (_[18] = [
+                  ])])) : (S(), E("svg", Sg, [...O[18] || (O[18] = [
                     g("path", { d: "M1 12s4-8 11-8 11 8 11 8-4 8-11 8S1 12 1 12z" }, null, -1),
                     g("circle", {
                       cx: "12",
@@ -6159,11 +6160,11 @@ const qy = { class: "vuecalendar-list" }, Xy = { class: "vuecalendar-list__heade
             g("button", {
               class: "vuecalendar__sidebar-action",
               type: "button",
-              onClick: _[1] || (_[1] = (...P) => h(V) && h(V)(...P))
+              onClick: O[1] || (O[1] = (...P) => h(V) && h(V)(...P))
             }, " Show all ")
           ])) : Z("", !0),
           d.value ? (S(), E("p", Tg, [
-            _[19] || (_[19] = kl('<svg class="vuecalendar__hint-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 9 2 12 5 15"></polyline><polyline points="9 5 12 2 15 5"></polyline><polyline points="15 19 12 22 9 19"></polyline><polyline points="19 9 22 12 19 15"></polyline><line x1="2" y1="12" x2="22" y2="12"></line><line x1="12" y1="2" x2="12" y2="22"></line></svg>', 1)),
+            O[19] || (O[19] = kl('<svg class="vuecalendar__hint-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 9 2 12 5 15"></polyline><polyline points="9 5 12 2 15 5"></polyline><polyline points="15 19 12 22 9 19"></polyline><polyline points="19 9 22 12 19 15"></polyline><line x1="2" y1="12" x2="22" y2="12"></line><line x1="12" y1="2" x2="12" y2="22"></line></svg>', 1)),
             Xr(" " + H(h(pe).sidebarDragHint), 1)
           ])) : Z("", !0)
         ])) : Z("", !0),
@@ -6174,8 +6175,8 @@ const qy = { class: "vuecalendar-list" }, Xy = { class: "vuecalendar-list__heade
               class: "vuecalendar__nav-btn",
               type: "button",
               title: "Previous",
-              onClick: _[2] || (_[2] = (...P) => h(Ge) && h(Ge)(...P))
-            }, [..._[20] || (_[20] = [
+              onClick: O[2] || (O[2] = (...P) => h(Ge) && h(Ge)(...P))
+            }, [...O[20] || (O[20] = [
               g("svg", {
                 viewBox: "0 0 24 24",
                 fill: "none",
@@ -6190,14 +6191,14 @@ const qy = { class: "vuecalendar-list" }, Xy = { class: "vuecalendar-list__heade
             g("button", {
               class: "vuecalendar__nav-btn vuecalendar__nav-btn--text",
               type: "button",
-              onClick: _[3] || (_[3] = (...P) => h(Bt) && h(Bt)(...P))
+              onClick: O[3] || (O[3] = (...P) => h(Bt) && h(Bt)(...P))
             }, H(h(pe).today), 1),
             g("button", {
               class: "vuecalendar__nav-btn",
               type: "button",
               title: "Next",
-              onClick: _[4] || (_[4] = (...P) => h(ut) && h(ut)(...P))
-            }, [..._[21] || (_[21] = [
+              onClick: O[4] || (O[4] = (...P) => h(ut) && h(ut)(...P))
+            }, [...O[21] || (O[21] = [
               g("svg", {
                 viewBox: "0 0 24 24",
                 fill: "none",
@@ -6211,7 +6212,7 @@ const qy = { class: "vuecalendar-list" }, Xy = { class: "vuecalendar-list__heade
             ])]),
             Da(Wh, {
               modelValue: h(K),
-              "onUpdate:modelValue": _[5] || (_[5] = (P) => nd(K) ? K.value = P : null),
+              "onUpdate:modelValue": O[5] || (O[5] = (P) => nd(K) ? K.value = P : null),
               placeholder: h(pe).datePickerPlaceholder,
               locale: e.locale,
               onDateSelect: h(Et)
@@ -6222,7 +6223,7 @@ const qy = { class: "vuecalendar-list" }, Xy = { class: "vuecalendar-list__heade
                 g("select", {
                   class: "vuecalendar__view-select",
                   value: k.value,
-                  onChange: _[6] || (_[6] = (P) => h(It)(P.target.value))
+                  onChange: O[6] || (O[6] = (P) => h(It)(P.target.value))
                 }, [
                   (S(!0), E(q, null, te(_e.value, (P) => (S(), E("option", {
                     key: P.key,
@@ -6265,12 +6266,12 @@ const qy = { class: "vuecalendar-list" }, Xy = { class: "vuecalendar-list__heade
                 "allow-overlap": B.value,
                 locale: e.locale,
                 "before-event-update": e.beforeEventUpdate,
-                onEventClick: _[7] || (_[7] = (P) => At("event-click", P)),
-                onEventDblclick: _[8] || (_[8] = (P) => At("event-dblclick", P)),
-                onEventUpdate: _[9] || (_[9] = (P) => At("event-update", P)),
-                onDrawEvent: _[10] || (_[10] = (P) => Kc("draw-event", P)),
-                onSlotClick: _[11] || (_[11] = (P) => At("slot-click", P)),
-                "onUpdate:savedScrollTop": _[12] || (_[12] = (P) => u.value = P)
+                onEventClick: O[7] || (O[7] = (P) => At("event-click", P)),
+                onEventDblclick: O[8] || (O[8] = (P) => At("event-dblclick", P)),
+                onEventUpdate: O[9] || (O[9] = (P) => At("event-update", P)),
+                onDrawEvent: O[10] || (O[10] = (P) => Kc("draw-event", P)),
+                onSlotClick: O[11] || (O[11] = (P) => At("slot-click", P)),
+                "onUpdate:savedScrollTop": O[12] || (O[12] = (P) => u.value = P)
               }, lr({ _: 2 }, [
                 N.$slots.event ? {
                   name: "event",
@@ -6312,8 +6313,8 @@ const qy = { class: "vuecalendar-list" }, Xy = { class: "vuecalendar-list__heade
                 "fit-full-day-height": e.fitFullDayHeight,
                 "zoom-level": m.value,
                 locale: e.locale,
-                onEventClick: _[13] || (_[13] = (P) => At("event-click", P)),
-                onEventDblclick: _[14] || (_[14] = (P) => At("event-dblclick", P))
+                onEventClick: O[13] || (O[13] = (P) => At("event-click", P)),
+                onEventDblclick: O[14] || (O[14] = (P) => At("event-dblclick", P))
               }, lr({ _: 2 }, [
                 N.$slots.event ? {
                   name: "event",
@@ -6336,7 +6337,7 @@ const qy = { class: "vuecalendar-list" }, Xy = { class: "vuecalendar-list__heade
             "more-label": h(pe).more,
             "is-mobile": h(p),
             "selected-date": h(U).toString(),
-            onEventClick: _[15] || (_[15] = (P) => At("event-click", P)),
+            onEventClick: O[15] || (O[15] = (P) => At("event-click", P)),
             onDayClick: h(un)
           }, lr({ _: 2 }, [
             N.$slots["month-event"] ? {
@@ -6354,7 +6355,7 @@ const qy = { class: "vuecalendar-list" }, Xy = { class: "vuecalendar-list__heade
             calendars: e.calendars,
             locale: e.locale,
             "empty-label": h(pe).noEvents,
-            onEventClick: _[16] || (_[16] = (P) => At("event-click", P))
+            onEventClick: O[16] || (O[16] = (P) => At("event-click", P))
           }, null, 8, ["date", "events", "calendars", "locale", "empty-label"])) : Z("", !0),
           N.$slots["event-modal"] ? Ae(N.$slots, "event-modal", rr(Kr({ key: 4 }, h(Jc)))) : Z("", !0)
         ])
@@ -6371,7 +6372,7 @@ const qy = { class: "vuecalendar-list" }, Xy = { class: "vuecalendar-list__heade
             color: h(Y).lightColors.onContainer
           })
         }, [
-          _[22] || (_[22] = g("svg", {
+          O[22] || (O[22] = g("svg", {
             class: "vuecalendar__drag-ghost-icon",
             viewBox: "0 0 24 24",
             fill: "none",
@@ -6413,7 +6414,7 @@ const qy = { class: "vuecalendar-list" }, Xy = { class: "vuecalendar-list__heade
     ], 64));
   }
 }, xg = ({ open: e, movable: t, cardEl: n }) => {
-  const r = W(!1), o = W(!1), a = W({ left: 0, top: 0 }), s = W({ x: 0, y: 0 }), i = O(() => !t.value || !o.value ? {} : {
+  const r = W(!1), o = W(!1), a = W({ left: 0, top: 0 }), s = W({ x: 0, y: 0 }), i = _(() => !t.value || !o.value ? {} : {
     left: `${a.value.left}px`,
     top: `${a.value.top}px`
   }), l = () => {
@@ -6658,7 +6659,7 @@ const qy = { class: "vuecalendar-list" }, Xy = { class: "vuecalendar-list__heade
       ]);
     };
   }
-}, o0 = {
+}, r0 = {
   office: {
     label: "Office",
     colorName: "office",
@@ -6744,17 +6745,17 @@ const qy = { class: "vuecalendar-list" }, Xy = { class: "vuecalendar-list__heade
     }
   }
 };
-function a0(e, t) {
+function o0(e, t) {
   return Object.assign({ name: e }, t);
 }
-const i0 = {
+const a0 = {
   install(e) {
     e.component("VueCalendar", $g), e.component("VueCalendarWeekView", Wc), e.component("VueCalendarMonthView", Gc), e.component("VueCalendarListView", qc), e.component("VueCalendarResourceView", Xc), e.component("VueCalendarEvent", es), e.component("VueEventModal", Qg);
   }
 };
 export {
   hy as DEFAULT_CALENDAR_COLORS,
-  n0 as MINUTES_PER_HOUR,
+  t0 as MINUTES_PER_HOUR,
   z as Temporal,
   $g as VueCalendar,
   es as VueCalendarEvent,
@@ -6764,9 +6765,9 @@ export {
   Wc as VueCalendarWeekView,
   Qg as VueEventModal,
   vn as addMinutesToDate,
-  o0 as calendars,
-  i0 as default,
-  a0 as definePlugin,
+  r0 as calendars,
+  a0 as default,
+  o0 as definePlugin,
   Oh as endOfIsoWeek,
   Lh as fmt_dayFull,
   vl as fmt_dayMedium,
@@ -6781,7 +6782,7 @@ export {
   br as isToday,
   ba as isWeekend,
   Ih as isZonedDateTime,
-  r0 as normaliseToPDT,
+  n0 as normaliseToPDT,
   fl as normalizeEventDate,
   kt as normalizeToPlainDateTime,
   ts as resolveCalendarColors,

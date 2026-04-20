@@ -4,7 +4,7 @@
 
 ### Patch Changes
 
-- Fix: do not fire range-update on initial load
+- Fix: added onBeforeRender
 - Updated dependencies
   - @vuecalendar/core@1.0.11
 

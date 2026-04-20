@@ -185,9 +185,6 @@
 import { computed, nextTick, onBeforeMount, ref, toRef, watch, watchEffect } from 'vue';
 import { normalizeEventDate } from '../utils/temporal.js';
 import { useNavTransition } from '../composables/useNavTransition.js';
-import '../styles/tokens.css';
-import '../styles/nav-transition.css';
-import '../styles/calendar.css';
 import VueDatePicker from './VueDatePicker.vue';
 import VueCalendarWeekView from './VueCalendarWeekView.vue';
 import VueCalendarMonthView from './VueCalendarMonthView.vue';
@@ -201,6 +198,10 @@ import { useSidebarDrag } from '../composables/useSidebarDrag.js';
 import { useCalendarPlugins } from '../composables/useCalendarPlugins.js';
 import { useCalendarVisibility } from '../composables/useCalendarVisibility.js';
 import { normalizeGridStep } from '../utils/weekViewMath.js';
+
+import '../styles/tokens.css';
+import '../styles/nav-transition.css';
+import '../styles/calendar.css';
 
 const props = defineProps({
 	/**
@@ -630,15 +631,12 @@ const forwardPluginEvent = (eventName, payload) => {
  * responses when the user navigates quickly.
  */
 let latestRangeRequestId = 0;
-let hasSyncedVisibleRange = false;
-const syncVisibleRange = async () => {
+const syncVisibleRange = async ({ emitRangeUpdate = true } = {}) => {
 	const range = getRange();
 
-	if (hasSyncedVisibleRange) {
+	if (emitRangeUpdate) {
 		emit('range-update', range);
 		pluginBus.emit('range-update', range);
-	} else {
-		hasSyncedVisibleRange = true;
 	}
 
 	if (!props.fetchEvents) {
@@ -655,7 +653,8 @@ const syncVisibleRange = async () => {
 	setEvents(events);
 };
 
-watch([currentDate, currentView], syncVisibleRange, { immediate: true });
+syncVisibleRange({ emitRangeUpdate: false });
+watch([currentDate, currentView], () => syncVisibleRange());
 
 const calendarApi = {
 	setDate,
