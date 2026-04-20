@@ -630,10 +630,16 @@ const forwardPluginEvent = (eventName, payload) => {
  * responses when the user navigates quickly.
  */
 let latestRangeRequestId = 0;
+let hasSyncedVisibleRange = false;
 const syncVisibleRange = async () => {
 	const range = getRange();
-	emit('range-update', range);
-	pluginBus.emit('range-update', range);
+
+	if (hasSyncedVisibleRange) {
+		emit('range-update', range);
+		pluginBus.emit('range-update', range);
+	} else {
+		hasSyncedVisibleRange = true;
+	}
 
 	if (!props.fetchEvents) {
 		return;

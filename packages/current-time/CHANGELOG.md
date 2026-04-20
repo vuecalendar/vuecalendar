@@ -1,5 +1,21 @@
 # @vuecalendar/current-time
 
+## 1.0.11
+
+### Patch Changes
+
+- Fix: do not fire range-update on initial load
+- Updated dependencies
+  - @vuecalendar/core@1.0.11
+
+## 1.0.10
+
+### Patch Changes
+
+- Fix: do not fire range-update on initial load
+- Updated dependencies
+  - @vuecalendar/core@1.0.10
+
 ## 1.0.9
 
 ### Patch Changes
