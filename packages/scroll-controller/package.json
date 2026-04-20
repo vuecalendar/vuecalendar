@@ -1,6 +1,6 @@
 {
   "name": "@vuecalendar/scroll-controller",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Scroll controller plugin for VueCalendar",
   "type": "module",
   "main": "./src/index.js",

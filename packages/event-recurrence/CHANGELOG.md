@@ -1,10 +1,18 @@
 # @vuecalendar/event-recurrence
 
+## 1.0.9
+
+### Patch Changes
+
+- Fix month view height and bundle core styles automatically
+- Updated dependencies
+  - @vuecalendar/core@1.0.9
+
 ## 1.0.8
 
 ### Patch Changes
 
-- Fix month view height, rename vuecalendar class hooks, and bundle core styles automatically
+- Describe the premium fix
 - Updated dependencies
   - @vuecalendar/core@1.0.8
 
