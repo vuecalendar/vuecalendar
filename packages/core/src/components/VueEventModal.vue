@@ -2,36 +2,33 @@
     <Teleport to="body">
         <div
             v-if="open"
-            class="vuecalendar-event-modal__backdrop ht-event-modal__backdrop"
+            class="vuecalendar-event-modal__backdrop"
             @mousedown.self="onBackdropMouseDown"
         >
             <div
                 ref="cardEl"
-                class="vuecalendar-event-modal ht-event-modal"
+                class="vuecalendar-event-modal"
                 :class="{
                     'vuecalendar-event-modal--movable': movable,
                     'vuecalendar-event-modal--floating': isFloating,
                     'vuecalendar-event-modal--moving': dragging,
-                    'ht-event-modal--movable': movable,
-                    'ht-event-modal--floating': isFloating,
-                    'ht-event-modal--moving': dragging,
                 }"
                 :style="cardStyle"
             >
-                <div class="vuecalendar-event-modal__header ht-event-modal__header" @mousedown="onHeaderMouseDown">
+                <div class="vuecalendar-event-modal__header" @mousedown="onHeaderMouseDown">
                     <div>
-                        <p class="vuecalendar-event-modal__eyebrow ht-event-modal__eyebrow">Event Modal</p>
-                        <h3 class="vuecalendar-event-modal__title ht-event-modal__title">
+                        <p class="vuecalendar-event-modal__eyebrow">Event Modal</p>
+                        <h3 class="vuecalendar-event-modal__title">
                             {{ mode === 'edit' ? 'Edit event' : 'Create event' }}
                         </h3>
                     </div>
-                    <button class="vuecalendar-event-modal__icon-btn ht-event-modal__icon-btn" type="button" @click="close?.()">
+                    <button class="vuecalendar-event-modal__icon-btn" type="button" @click="close?.()">
                         Close
                     </button>
                 </div>
 
-                <div class="vuecalendar-event-modal__body ht-event-modal__body">
-                    <label v-if="!hideTitle" class="vuecalendar-event-modal__field ht-event-modal__field">
+                <div class="vuecalendar-event-modal__body">
+                    <label v-if="!hideTitle" class="vuecalendar-event-modal__field">
                         <span>Title</span>
                         <input
                             :value="draft?.title ?? ''"
@@ -41,7 +38,7 @@
                         />
                     </label>
 
-                    <label class="vuecalendar-event-modal__field ht-event-modal__field">
+                    <label class="vuecalendar-event-modal__field">
                         <span>Calendar</span>
                         <select
                             :value="draft?.calendarId ?? ''"
@@ -57,8 +54,8 @@
                         </select>
                     </label>
 
-                    <div class="vuecalendar-event-modal__grid ht-event-modal__grid">
-                        <label class="vuecalendar-event-modal__field ht-event-modal__field">
+                    <div class="vuecalendar-event-modal__grid">
+                        <label class="vuecalendar-event-modal__field">
                             <span>Start</span>
                             <input
                                 :value="toDateTimeLocal(draft?.start)"
@@ -67,7 +64,7 @@
                             />
                         </label>
 
-                        <label class="vuecalendar-event-modal__field ht-event-modal__field">
+                        <label class="vuecalendar-event-modal__field">
                             <span>End</span>
                             <input
                                 :value="toDateTimeLocal(draft?.end)"
@@ -77,7 +74,7 @@
                         </label>
                     </div>
 
-                    <label class="vuecalendar-event-modal__field ht-event-modal__field">
+                    <label class="vuecalendar-event-modal__field">
                         <span>Description</span>
                         <textarea
                             rows="4"
@@ -96,13 +93,13 @@
                     />
                 </div>
 
-                <div class="vuecalendar-event-modal__footer ht-event-modal__footer">
-                    <button class="vuecalendar-event-modal__btn ht-event-modal__btn" type="button" @click="close?.()">
+                <div class="vuecalendar-event-modal__footer">
+                    <button class="vuecalendar-event-modal__btn" type="button" @click="close?.()">
                         Cancel
                     </button>
                     <button
                         v-if="mode === 'edit'"
-                        class="vuecalendar-event-modal__btn vuecalendar-event-modal__btn--danger ht-event-modal__btn ht-event-modal__btn--danger"
+                        class="vuecalendar-event-modal__btn vuecalendar-event-modal__btn--danger"
                         type="button"
                         :disabled="!editable || busy"
                         @click="onDeleteClick"
@@ -110,7 +107,7 @@
                         Delete
                     </button>
                     <button
-                        class="vuecalendar-event-modal__btn vuecalendar-event-modal__btn--primary ht-event-modal__btn ht-event-modal__btn--primary"
+                        class="vuecalendar-event-modal__btn vuecalendar-event-modal__btn--primary"
                         type="button"
                         :disabled="!editable || busy"
                         @click="onSaveClick"

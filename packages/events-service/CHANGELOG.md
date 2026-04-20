@@ -4,7 +4,7 @@
 
 ### Patch Changes
 
-- Describe the public fix
+- Fix month view height, rename vuecalendar class hooks, and bundle core styles automatically
 - Updated dependencies
   - @vuecalendar/core@1.0.8
 

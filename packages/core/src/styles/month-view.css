@@ -1,4 +1,4 @@
-.ht-month {
+.vuecalendar-month {
     display: flex;
     flex-direction: column;
     flex: 1;
@@ -6,14 +6,14 @@
     min-height: 0;
 }
 
-.ht-month__dow-row {
+.vuecalendar-month__dow-row {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     border-bottom: 1px solid var(--ht-border);
     flex-shrink: 0;
 }
 
-.ht-month__dow {
+.vuecalendar-month__dow {
     padding: 8px 0;
     text-align: center;
     font-size: 11px;
@@ -23,42 +23,46 @@
     letter-spacing: 0.04em;
 }
 
-.ht-month__grid {
+.vuecalendar-month__grid {
     flex: 1;
     display: grid;
     grid-template-columns: repeat(7, 1fr);
+    grid-auto-rows: minmax(0, 1fr);
     overflow-y: auto;
-    min-height: 480px;
-    align-content: start;
+    min-height: 0;
+    align-content: stretch;
 }
 
-.ht-month__cell {
+.vuecalendar-month__cell {
     border-right: 1px solid var(--ht-border-light);
     border-bottom: 1px solid var(--ht-border-light);
     padding: 4px;
     min-height: 96px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
     cursor: pointer;
     transition: background 0.1s;
 }
 
-.ht-month__cell:hover {
+.vuecalendar-month__cell:hover {
     background: var(--ht-bg-muted);
 }
 
-.ht-month__cell--other {
+.vuecalendar-month__cell--other {
     background: rgba(0, 0, 0, 0.012);
 }
 
-.ht-month__cell--today {
+.vuecalendar-month__cell--today {
     box-shadow: inset 0 0 0 2px var(--ht-color-primary-ring);
 }
 
-.ht-month__cell--selected {
+.vuecalendar-month__cell--selected {
     background: color-mix(in srgb, var(--ht-color-primary-bg, #eef2ff) 82%, white);
     box-shadow: inset 0 0 0 2px var(--ht-color-primary-ring);
 }
 
-.ht-month__day-num {
+.vuecalendar-month__day-num {
     width: 24px;
     height: 24px;
     border-radius: 50%;
@@ -71,22 +75,24 @@
     margin-bottom: 4px;
 }
 
-.ht-month__day-num--today {
+.vuecalendar-month__day-num--today {
     background: var(--ht-color-primary);
     color: var(--ht-bg);
 }
 
-.ht-month__day-num--other {
+.vuecalendar-month__day-num--other {
     color: var(--ht-text-300);
 }
 
-.ht-month__events {
+.vuecalendar-month__events {
     display: flex;
     flex-direction: column;
     gap: 2px;
+    flex: 1;
+    min-height: 0;
 }
 
-.ht-month__events--mobile {
+.vuecalendar-month__events--mobile {
     flex-direction: row;
     align-items: center;
     gap: 4px;
@@ -94,7 +100,7 @@
     margin-top: 6px;
 }
 
-.ht-month__badge {
+.vuecalendar-month__badge {
     font-size: 11px;
     padding: 1px 4px;
     border-radius: 3px;
@@ -104,20 +110,20 @@
     cursor: pointer;
 }
 
-.ht-month__more {
+.vuecalendar-month__more {
     font-size: 11px;
     color: var(--ht-text-400);
     padding: 0 4px;
 }
 
-.ht-month__dot {
+.vuecalendar-month__dot {
     width: 6px;
     height: 6px;
     border-radius: 999px;
     flex-shrink: 0;
 }
 
-.ht-month__agenda {
+.vuecalendar-month__agenda {
     border-top: 1px solid var(--ht-border);
     padding: 10px 8px 12px;
     background: var(--ht-bg);
@@ -126,7 +132,7 @@
     gap: 8px;
 }
 
-.ht-month__agenda-item {
+.vuecalendar-month__agenda-item {
     width: 100%;
     border: none;
     border-radius: 8px;
@@ -139,50 +145,50 @@
     font-family: inherit;
 }
 
-.ht-month__agenda-title {
+.vuecalendar-month__agenda-title {
     font-size: 12px;
     font-weight: 700;
 }
 
-.ht-month__agenda-range {
+.vuecalendar-month__agenda-range {
     font-size: 11px;
     opacity: 0.8;
 }
 
-.ht-month__agenda-empty {
+.vuecalendar-month__agenda-empty {
     font-size: 12px;
     color: var(--ht-text-400);
     padding: 6px 4px;
 }
 
 @media (max-width: 720px) {
-    .ht-month--mobile {
+    .vuecalendar-month--mobile {
         overflow: visible;
     }
 
-    .ht-month--mobile .ht-month__dow-row {
+    .vuecalendar-month--mobile .vuecalendar-month__dow-row {
         border-bottom: none;
         padding: 8px 6px 2px;
     }
 
-    .ht-month--mobile .ht-month__dow {
+    .vuecalendar-month--mobile .vuecalendar-month__dow {
         padding: 6px 0;
         font-size: 12px;
         letter-spacing: 0;
         text-transform: none;
     }
 
-    .ht-month--mobile .ht-month__grid {
+    .vuecalendar-month--mobile .vuecalendar-month__grid {
         min-height: 0;
         overflow: visible;
     }
 
-    .ht-month--mobile .ht-month__cell {
+    .vuecalendar-month--mobile .vuecalendar-month__cell {
         min-height: 54px;
         padding: 8px 4px 6px;
     }
 
-    .ht-month--mobile .ht-month__day-num {
+    .vuecalendar-month--mobile .vuecalendar-month__day-num {
         width: 28px;
         height: 28px;
         margin: 0 auto;

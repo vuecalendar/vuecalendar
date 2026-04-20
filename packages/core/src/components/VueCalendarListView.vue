@@ -1,10 +1,10 @@
 <template>
-    <div class="vuecalendar-list ht-list">
-        <div class="vuecalendar-list__header ht-list__header">
-            <span class="vuecalendar-list__day-label ht-list__day-label">{{ dayLabel }}</span>
+    <div class="vuecalendar-list">
+        <div class="vuecalendar-list__header">
+            <span class="vuecalendar-list__day-label">{{ dayLabel }}</span>
         </div>
 
-        <div v-if="items.length === 0" class="vuecalendar-list__empty ht-list__empty">
+        <div v-if="items.length === 0" class="vuecalendar-list__empty">
             {{ emptyLabel }}
         </div>
 
@@ -13,19 +13,19 @@
                 v-for="item in items"
                 :key="item.event.id"
                 type="button"
-                class="vuecalendar-list__item ht-list__item"
+                class="vuecalendar-list__item"
                 :style="itemStyle(item.event)"
                 @click="$emit('event-click', item.event)"
             >
-                <div class="vuecalendar-list__title ht-list__title">
+                <div class="vuecalendar-list__title">
                     {{ item.event.title }}
                 </div>
 
-                <div class="vuecalendar-list__meta ht-list__meta">
-                    <span v-if="item.timePrimary" class="vuecalendar-list__time-primary ht-list__time-primary">
+                <div class="vuecalendar-list__meta">
+                    <span v-if="item.timePrimary" class="vuecalendar-list__time-primary">
                         {{ item.timePrimary }}
                     </span>
-                    <span v-if="item.timeSecondary" class="vuecalendar-list__time-secondary ht-list__time-secondary">
+                    <span v-if="item.timeSecondary" class="vuecalendar-list__time-secondary">
                         {{ item.timeSecondary }}
                     </span>
                 </div>

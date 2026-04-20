@@ -1,4 +1,4 @@
-.ht-event {
+.vuecalendar-event {
     position: absolute;
     left: 2px;
     right: 2px;
@@ -10,7 +10,7 @@
     font-size: 12px;
 }
 
-.ht-event__header {
+.vuecalendar-event__header {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -18,7 +18,7 @@
     gap: 4px;
 }
 
-.ht-event__title {
+.vuecalendar-event__title {
     font-weight: 700;
     font-size: 12px;
     white-space: nowrap;
@@ -29,8 +29,8 @@
     min-width: 0;
 }
 
-.ht-event__time,
-.ht-event__desc {
+.vuecalendar-event__time,
+.vuecalendar-event__desc {
     display: flex;
     align-items: center;
     gap: 3px;
@@ -43,17 +43,17 @@
     text-overflow: ellipsis;
 }
 
-.ht-event__desc {
+.vuecalendar-event__desc {
     opacity: 0.7;
 }
 
-.ht-event__icon {
+.vuecalendar-event__icon {
     width: 10px;
     height: 10px;
     flex-shrink: 0;
 }
 
-.ht-event__resize-handle {
+.vuecalendar-event__resize-handle {
     position: absolute;
     bottom: 0;
     left: 0;

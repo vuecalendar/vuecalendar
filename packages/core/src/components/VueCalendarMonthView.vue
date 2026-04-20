@@ -1,44 +1,39 @@
 <template>
-    <div class="vuecalendar-month ht-month" :class="{ 'vuecalendar-month--mobile': isMobile, 'ht-month--mobile': isMobile }">
-        <div class="vuecalendar-month__dow-row ht-month__dow-row">
-            <div v-for="label in dayLabels" :key="label" class="vuecalendar-month__dow ht-month__dow">
+    <div class="vuecalendar-month" :class="{ 'vuecalendar-month--mobile': isMobile }">
+        <div class="vuecalendar-month__dow-row">
+            <div v-for="label in dayLabels" :key="label" class="vuecalendar-month__dow">
                 {{ label }}
             </div>
         </div>
 
-        <div class="vuecalendar-month__grid ht-month__grid">
+        <div class="vuecalendar-month__grid">
             <div
                 v-for="(day, index) in calendarDays"
                 :key="index"
-                class="vuecalendar-month__cell ht-month__cell"
+                class="vuecalendar-month__cell"
                 :class="{
                     'vuecalendar-month__cell--other': !isCurrentMonth(day),
                     'vuecalendar-month__cell--today': isToday(day),
                     'vuecalendar-month__cell--selected': isMobile && selectedDayKey === day.toString(),
-                    'ht-month__cell--other': !isCurrentMonth(day),
-                    'ht-month__cell--today': isToday(day),
-                    'ht-month__cell--selected': isMobile && selectedDayKey === day.toString(),
                 }"
                 @click="handleDayClick(day)"
             >
                 <div
-                    class="vuecalendar-month__day-num ht-month__day-num"
+                    class="vuecalendar-month__day-num"
                     :class="{
                         'vuecalendar-month__day-num--today': isToday(day),
                         'vuecalendar-month__day-num--other': !isCurrentMonth(day),
-                        'ht-month__day-num--today': isToday(day),
-                        'ht-month__day-num--other': !isCurrentMonth(day),
                     }"
                 >
                     {{ String(day.day) }}
                 </div>
 
-                <div class="vuecalendar-month__events ht-month__events" :class="{ 'vuecalendar-month__events--mobile': isMobile }">
+                <div class="vuecalendar-month__events" :class="{ 'vuecalendar-month__events--mobile': isMobile }">
                     <template v-if="isMobile">
                         <span
                             v-for="event in getVisibleDots(day)"
                             :key="event.id"
-                            class="vuecalendar-month__dot ht-month__dot"
+                            class="vuecalendar-month__dot"
                             :style="eventDotStyle(event)"
                         />
                     </template>
@@ -53,7 +48,7 @@
                             :on-event-click="(domEvent) => { domEvent.stopPropagation(); $emit('event-click', event); }"
                         >
                             <div
-                                class="vuecalendar-month__badge ht-month__badge"
+                                class="vuecalendar-month__badge"
                                 :style="eventBadgeStyle(event)"
                                 @click.stop="$emit('event-click', event)"
                             >
@@ -62,28 +57,28 @@
                         </slot>
                     </template>
 
-                    <div v-if="!isMobile && getEventsForDay(day).length > maxVisible" class="vuecalendar-month__more ht-month__more">
+                    <div v-if="!isMobile && getEventsForDay(day).length > maxVisible" class="vuecalendar-month__more">
                         +{{ getEventsForDay(day).length - maxVisible }} {{ moreLabel }}
                     </div>
                 </div>
             </div>
         </div>
 
-        <div v-if="isMobile" class="vuecalendar-month__agenda ht-month__agenda">
+        <div v-if="isMobile" class="vuecalendar-month__agenda">
             <template v-if="selectedDayEvents.length > 0">
                 <button
                     v-for="event in selectedDayEvents"
                     :key="event.id"
                     type="button"
-                    class="vuecalendar-month__agenda-item ht-month__agenda-item"
+                    class="vuecalendar-month__agenda-item"
                     :style="eventBadgeStyle(event)"
                     @click="$emit('event-click', event)"
                 >
-                    <span class="vuecalendar-month__agenda-title ht-month__agenda-title">{{ event.title }}</span>
-                    <span class="vuecalendar-month__agenda-range ht-month__agenda-range">{{ formatAgendaRange(event) }}</span>
+                    <span class="vuecalendar-month__agenda-title">{{ event.title }}</span>
+                    <span class="vuecalendar-month__agenda-range">{{ formatAgendaRange(event) }}</span>
                 </button>
             </template>
-            <div v-else class="vuecalendar-month__agenda-empty ht-month__agenda-empty">
+            <div v-else class="vuecalendar-month__agenda-empty">
                 No events
             </div>
         </div>

@@ -1,27 +1,27 @@
 <template>
-    <div class="vuecalendar-resource ht-resource">
-        <div class="vuecalendar-resource__scroll-shell ht-resource__scroll-shell">
-            <div class="vuecalendar-resource__content ht-resource__content">
-                <div class="vuecalendar-resource__headers ht-resource__headers" :style="{ paddingLeft: `${TIME_AXIS_WIDTH}px` }">
-                    <div class="vuecalendar-resource__day-row ht-resource__day-row" :style="headerGridStyle">
+    <div class="vuecalendar-resource">
+        <div class="vuecalendar-resource__scroll-shell">
+            <div class="vuecalendar-resource__content">
+                <div class="vuecalendar-resource__headers" :style="{ paddingLeft: `${TIME_AXIS_WIDTH}px` }">
+                    <div class="vuecalendar-resource__day-row" :style="headerGridStyle">
                         <div
                             v-for="day in days"
                             :key="`resource-day-${day.toString()}`"
-                            class="vuecalendar-resource__day-header ht-resource__day-header"
+                            class="vuecalendar-resource__day-header"
                             :style="{ gridColumn: `span ${resourceCount}` }"
                         >
-                            <div class="vuecalendar-resource__day-name ht-resource__day-name">{{ fmt_weekdayShort(day, locale) }}</div>
-                            <div class="vuecalendar-resource__day-num ht-resource__day-num" :class="{ 'vuecalendar-resource__day-num--today': isToday(day), 'ht-resource__day-num--today': isToday(day) }">
+                            <div class="vuecalendar-resource__day-name">{{ fmt_weekdayShort(day, locale) }}</div>
+                            <div class="vuecalendar-resource__day-num" :class="{ 'vuecalendar-resource__day-num--today': isToday(day) }">
                                 {{ String(day.day) }}
                             </div>
                         </div>
                     </div>
 
-                    <div class="vuecalendar-resource__resource-row ht-resource__resource-row" :style="headerGridStyle">
+                    <div class="vuecalendar-resource__resource-row" :style="headerGridStyle">
                         <div
                             v-for="column in resourceColumns"
                             :key="`resource-header-${column.key}`"
-                            class="vuecalendar-resource__resource-header ht-resource__resource-header"
+                            class="vuecalendar-resource__resource-header"
                             :style="getResourceHeaderStyle(column.resource)"
                         >
                             {{ column.resource.label ?? column.resource.id }}
@@ -31,58 +31,55 @@
 
                 <div
                     ref="gridContainer"
-                    class="vuecalendar-resource__grid ht-resource__grid"
+                    class="vuecalendar-resource__grid"
                     :class="{
                         'vuecalendar-resource__grid--bounded': !isFullDayBoundary,
                         'vuecalendar-resource__grid--static': isFullDayBoundary && !showsVerticalScroll,
                         'vuecalendar-resource__grid--scrollable-bounded': !isFullDayBoundary && hasExplicitGridHeight,
-                        'ht-resource__grid--bounded': !isFullDayBoundary,
-                        'ht-resource__grid--static': isFullDayBoundary && !showsVerticalScroll,
-                        'ht-resource__grid--scrollable-bounded': !isFullDayBoundary && hasExplicitGridHeight,
                     }"
                 >
-                    <div class="vuecalendar-resource__inner ht-resource__inner" :style="{ height: `${totalHeight}px` }">
-                        <div class="vuecalendar-resource__time-axis ht-resource__time-axis" :style="{ width: `${TIME_AXIS_WIDTH}px` }">
+                    <div class="vuecalendar-resource__inner" :style="{ height: `${totalHeight}px` }">
+                        <div class="vuecalendar-resource__time-axis" :style="{ width: `${TIME_AXIS_WIDTH}px` }">
                             <div
                                 v-for="(tick, index) in hourTicks"
                                 :key="`resource-hour-${index}`"
-                                class="vuecalendar-resource__hour-label ht-resource__hour-label"
+                                class="vuecalendar-resource__hour-label"
                                 :style="{ top: `${tick.topPx}px` }"
                             >
                                 {{ tick.label }}
                             </div>
                         </div>
 
-                        <div class="vuecalendar-resource__columns ht-resource__columns" :style="gridColumnStyle">
+                        <div class="vuecalendar-resource__columns" :style="gridColumnStyle">
                             <div
                                 v-for="column in resourceColumns"
                                 :key="column.key"
-                                class="vuecalendar-resource__col ht-resource__col"
-                                :class="{ 'vuecalendar-resource__col--weekend': isWeekend(column.day), 'ht-resource__col--weekend': isWeekend(column.day) }"
+                                class="vuecalendar-resource__col"
+                                :class="{ 'vuecalendar-resource__col--weekend': isWeekend(column.day) }"
                                 :data-day="column.day.toString()"
                                 :data-resource-id="column.resource.id"
                             >
                                 <div
                                     v-for="(line, index) in gridLineTicks"
                                     :key="`resource-line-${column.key}-${index}`"
-                                    class="vuecalendar-resource__grid-line ht-resource__grid-line"
-                                    :class="{ 'vuecalendar-resource__grid-line--half': line.isHalf, 'ht-resource__grid-line--half': line.isHalf }"
+                                    class="vuecalendar-resource__grid-line"
+                                    :class="{ 'vuecalendar-resource__grid-line--half': line.isHalf }"
                                     :style="{ top: `${line.topPx}px` }"
                                 />
 
                                 <div
-                                    class="vuecalendar-resource__shade ht-resource__shade"
+                                    class="vuecalendar-resource__shade"
                                     :style="{ top: 0, height: `${Math.max(0, minutesToPx(workdayStart * 60))}px` }"
                                 />
 
                                 <div
-                                    class="vuecalendar-resource__shade ht-resource__shade"
+                                    class="vuecalendar-resource__shade"
                                     :style="{ top: `${Math.max(0, minutesToPx(workdayEnd * 60))}px`, bottom: 0, height: 'auto' }"
                                 />
 
-                                <div v-if="isWeekend(column.day)" class="vuecalendar-resource__weekend-shade ht-resource__weekend-shade" />
+                                <div v-if="isWeekend(column.day)" class="vuecalendar-resource__weekend-shade" />
 
-                                <TransitionGroup name="vuecalendar-ev" tag="div" class="vuecalendar-resource__events-layer ht-resource__events-layer">
+                                <TransitionGroup name="vuecalendar-ev" tag="div" class="vuecalendar-resource__events-layer">
                                     <VueCalendarEvent
                                         v-for="(event, index) in getEventsForColumn(column.day, column.resource.id)"
                                         :key="event.id"
@@ -95,7 +92,7 @@
                                         :col="colLayout.get(event.id)?.col ?? 0"
                                         :total-cols="colLayout.get(event.id)?.total ?? 1"
                                         :style="{ '--i': index }"
-                                        class="vuecalendar-resource__event ht-resource__event"
+                                        class="vuecalendar-resource__event"
                                         @click="emit('event-click', event)"
                                         @dblclick.stop="emit('event-dblclick', event)"
                                     >

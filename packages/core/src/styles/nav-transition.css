@@ -1,7 +1,7 @@
 /*
  * VueCalendar shared navigation slide transitions.
  *
- * Works with useNavTransition() composable - the default prefix is 'ht-nav'.
+ * Works with useNavTransition() composable - the default prefix is 'vuecalendar-nav'.
  * Import this file once in your app's entry point, or in any component that
  * needs it (without `scoped` so Vue's <Transition> can pick up the classes).
  *
@@ -11,21 +11,13 @@
 .vuecalendar-nav-next-enter-active,
 .vuecalendar-nav-next-leave-active,
 .vuecalendar-nav-prev-enter-active,
-.vuecalendar-nav-prev-leave-active,
-.ht-nav-next-enter-active,
-.ht-nav-next-leave-active,
-.ht-nav-prev-enter-active,
-.ht-nav-prev-leave-active {
+.vuecalendar-nav-prev-leave-active {
     transition: opacity 0.18s ease, transform 0.18s ease;
     will-change: opacity, transform;
 }
 
-.vuecalendar-nav-next-enter-from,
-.ht-nav-next-enter-from { transform: translateX(24px);  opacity: 0; }
-.vuecalendar-nav-next-leave-to,
-.ht-nav-next-leave-to   { transform: translateX(-24px); opacity: 0; }
+.vuecalendar-nav-next-enter-from { transform: translateX(24px);  opacity: 0; }
+.vuecalendar-nav-next-leave-to   { transform: translateX(-24px); opacity: 0; }
 
-.vuecalendar-nav-prev-enter-from,
-.ht-nav-prev-enter-from { transform: translateX(-24px); opacity: 0; }
-.vuecalendar-nav-prev-leave-to,
-.ht-nav-prev-leave-to   { transform: translateX(24px);  opacity: 0; }
+.vuecalendar-nav-prev-enter-from { transform: translateX(-24px); opacity: 0; }
+.vuecalendar-nav-prev-leave-to   { transform: translateX(24px);  opacity: 0; }

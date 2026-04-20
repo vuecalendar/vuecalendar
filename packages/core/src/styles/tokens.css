@@ -1,12 +1,11 @@
 /**
  * VueCalendar - Design Tokens
  * ============================================================
- * Import this file once in your app entry to get the full
- * default theme. Override any variable on :root {} or on a
- * specific wrapper element to retheme without touching source.
+ * VueCalendar styles are bundled automatically with
+ * `@vuecalendar/core`.
  *
- * Usage:
- *   import '@vuecalendar/core/tokens.css';
+ * Use these tokens when you want to override the default look
+ * globally on `:root` or on a specific wrapper element.
  *
  * Override example:
  *   :root {

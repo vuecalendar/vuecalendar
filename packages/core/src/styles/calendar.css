@@ -287,7 +287,7 @@
 	display: grid;
 }
 
-.vuecalendar--mobile .ht-dp__input {
+.vuecalendar--mobile .vuecalendar-date-picker__input {
 	border: none;
 	background: transparent;
 	padding: 0;
@@ -299,7 +299,7 @@
 	color: var(--ht-text-700);
 }
 
-.vuecalendar--mobile .ht-dp__icon svg {
+.vuecalendar--mobile .vuecalendar-date-picker__icon svg {
 	width: 13px;
 	height: 13px;
 }

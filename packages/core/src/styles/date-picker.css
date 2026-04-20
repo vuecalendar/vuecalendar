@@ -1,11 +1,11 @@
-.ht-dp {
+.vuecalendar-date-picker {
     position: relative;
     display: inline-block;
     font-family: inherit;
     font-size: 13px;
 }
 
-.ht-dp__input {
+.vuecalendar-date-picker__input {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -20,11 +20,11 @@
     color: #6b7280;
 }
 
-.ht-dp__input:hover {
+.vuecalendar-date-picker__input:hover {
     color: #111827;
 }
 
-.ht-dp__icon {
+.vuecalendar-date-picker__icon {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -32,12 +32,12 @@
     color: currentColor;
 }
 
-.ht-dp__icon svg {
+.vuecalendar-date-picker__icon svg {
     width: 14px;
     height: 14px;
 }
 
-.ht-dp__panel {
+.vuecalendar-date-picker__panel {
     position: absolute;
     top: calc(100% + 4px);
     left: 0;
@@ -52,20 +52,20 @@
     user-select: none;
 }
 
-.ht-dp__header {
+.vuecalendar-date-picker__header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 8px;
 }
 
-.ht-dp__month-label {
+.vuecalendar-date-picker__month-label {
     font-weight: 600;
     font-size: 13px;
     color: #111827;
 }
 
-.ht-dp__nav-btn {
+.vuecalendar-date-picker__nav-btn {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -78,23 +78,23 @@
     transition: background 0.12s, color 0.12s;
 }
 
-.ht-dp__nav-btn:hover {
+.vuecalendar-date-picker__nav-btn:hover {
     background: #f3f4f6;
     color: #111827;
 }
 
-.ht-dp__nav-btn svg {
+.vuecalendar-date-picker__nav-btn svg {
     width: 14px;
     height: 14px;
 }
 
-.ht-dp__dow-row {
+.vuecalendar-date-picker__dow-row {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     margin-bottom: 4px;
 }
 
-.ht-dp__dow {
+.vuecalendar-date-picker__dow {
     text-align: center;
     font-size: 11px;
     font-weight: 500;
@@ -103,13 +103,13 @@
     text-transform: uppercase;
 }
 
-.ht-dp__grid {
+.vuecalendar-date-picker__grid {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     gap: 2px;
 }
 
-.ht-dp__day {
+.vuecalendar-date-picker__day {
     border: none;
     background: none;
     cursor: pointer;
@@ -124,20 +124,20 @@
     padding: 0;
 }
 
-.ht-dp__day:hover:not(.ht-dp__day--selected) {
+.vuecalendar-date-picker__day:hover:not(.vuecalendar-date-picker__day--selected) {
     background: #f3f4f6;
 }
 
-.ht-dp__day--other {
+.vuecalendar-date-picker__day--other {
     color: #d1d5db;
 }
 
-.ht-dp__day--today {
+.vuecalendar-date-picker__day--today {
     font-weight: 700;
     color: #2563eb;
 }
 
-.ht-dp__day--selected {
+.vuecalendar-date-picker__day--selected {
     background: #2563eb !important;
     color: #fff !important;
 }

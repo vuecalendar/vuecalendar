@@ -2,9 +2,14 @@
   "name": "@vuecalendar/core",
   "version": "1.0.8",
   "type": "module",
+  "main": "./dist/index.umd.cjs",
+  "module": "./dist/index.es.js",
   "description": "Vue 3 calendar component - no external UI dependencies",
   "exports": {
-    ".": "./src/index.js",
+    ".": {
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.umd.cjs"
+    },
     "./tokens.css": "./src/styles/tokens.css",
     "./nav-transition.css": "./src/styles/nav-transition.css"
   },

@@ -1,17 +1,17 @@
-.ht-list {
+.vuecalendar-list {
     display: flex;
     flex-direction: column;
     min-height: 100%;
     background: var(--ht-bg);
 }
 
-.ht-list__header {
+.vuecalendar-list__header {
     padding: 10px 14px;
     border-bottom: 1px solid var(--ht-border);
     background: linear-gradient(180deg, rgba(99, 102, 241, 0.06), rgba(99, 102, 241, 0.02));
 }
 
-.ht-list__day-label {
+.vuecalendar-list__day-label {
     font-size: 11px;
     font-weight: 700;
     letter-spacing: 0.08em;
@@ -19,13 +19,13 @@
     color: var(--ht-text-500);
 }
 
-.ht-list__empty {
+.vuecalendar-list__empty {
     padding: 18px 14px;
     color: var(--ht-text-400);
     font-size: 13px;
 }
 
-.ht-list__item {
+.vuecalendar-list__item {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     gap: 12px;
@@ -41,11 +41,11 @@
     cursor: pointer;
 }
 
-.ht-list__item:hover {
+.vuecalendar-list__item:hover {
     background: color-mix(in srgb, var(--ht-list-container) 42%, white);
 }
 
-.ht-list__title {
+.vuecalendar-list__title {
     min-width: 0;
     font-size: 13px;
     font-weight: 500;
@@ -54,7 +54,7 @@
     white-space: nowrap;
 }
 
-.ht-list__meta {
+.vuecalendar-list__meta {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -64,17 +64,17 @@
     white-space: nowrap;
 }
 
-.ht-list__time-primary,
-.ht-list__time-secondary {
+.vuecalendar-list__time-primary,
+.vuecalendar-list__time-secondary {
     line-height: 1.2;
 }
 
 @media (max-width: 760px) {
-    .ht-list__item {
+    .vuecalendar-list__item {
         grid-template-columns: 1fr;
     }
 
-    .ht-list__meta {
+    .vuecalendar-list__meta {
         align-items: flex-start;
     }
 }

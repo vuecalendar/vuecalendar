@@ -1,10 +1,10 @@
 <template>
-	<div class="vuecalendar-week ht-week">
-		<div class="vuecalendar-week__day-headers ht-week__day-headers" :style="{ paddingLeft: `${TIME_AXIS_WIDTH}px` }">
-			<div v-for="day in days" :key="day.toString()" class="vuecalendar-week__day-header ht-week__day-header">
+	<div class="vuecalendar-week">
+		<div class="vuecalendar-week__day-headers" :style="{ paddingLeft: `${TIME_AXIS_WIDTH}px` }">
+			<div v-for="day in days" :key="day.toString()" class="vuecalendar-week__day-header">
 				<slot name="day-header" :day="day" :is-today="isToday(day)">
-					<div class="vuecalendar-week__day-name ht-week__day-name">{{ fmt_weekdayShort(day, locale) }}</div>
-					<div class="vuecalendar-week__day-num ht-week__day-num" :class="{ 'vuecalendar-week__day-num--today': isToday(day), 'ht-week__day-num--today': isToday(day) }">
+					<div class="vuecalendar-week__day-name">{{ fmt_weekdayShort(day, locale) }}</div>
+					<div class="vuecalendar-week__day-num" :class="{ 'vuecalendar-week__day-num--today': isToday(day) }">
 						{{ String(day.day) }}
 					</div>
 				</slot>
@@ -13,29 +13,27 @@
 
 		<div
 			v-if="multiDayRowCount > 0"
-			class="vuecalendar-week__multi-day ht-week__multi-day"
+			class="vuecalendar-week__multi-day"
 			:style="{
 				paddingLeft: `${TIME_AXIS_WIDTH}px`,
 				height: `${multiDayLaneHeight}px`,
 			}"
 		>
-			<div class="vuecalendar-week__multi-day-grid ht-week__multi-day-grid">
+			<div class="vuecalendar-week__multi-day-grid">
 				<div
 					v-for="day in days"
 					:key="`multi-${day.toString()}`"
-					class="vuecalendar-week__multi-day-col ht-week__multi-day-col"
+					class="vuecalendar-week__multi-day-col"
 				/>
 
 				<button
 					v-for="item in multiDayEvents"
 					:key="`multi-${item.event.id}`"
 					type="button"
-					class="vuecalendar-week__multi-day-event ht-week__multi-day-event"
+					class="vuecalendar-week__multi-day-event"
 					:class="{
 						'vuecalendar-week__multi-day-event--continues-left': item.startsBeforeRange,
 						'vuecalendar-week__multi-day-event--continues-right': item.endsAfterRange,
-						'ht-week__multi-day-event--continues-left': item.startsBeforeRange,
-						'ht-week__multi-day-event--continues-right': item.endsAfterRange,
 					}"
 					:style="getMultiDayEventStyle(item)"
 					@click="emit('event-click', item.event)"
@@ -43,18 +41,18 @@
 				>
 					<span
 						v-if="item.startsBeforeRange"
-						class="vuecalendar-week__multi-day-edge vuecalendar-week__multi-day-edge--left ht-week__multi-day-edge ht-week__multi-day-edge--left"
+						class="vuecalendar-week__multi-day-edge vuecalendar-week__multi-day-edge--left"
 						aria-hidden="true"
 					/>
-					<span class="vuecalendar-week__multi-day-copy ht-week__multi-day-copy">
-						<span class="vuecalendar-week__multi-day-title ht-week__multi-day-title">{{ item.event.title }}</span>
-						<span v-if="getMultiDayEventTime(item)" class="vuecalendar-week__multi-day-time ht-week__multi-day-time">
+					<span class="vuecalendar-week__multi-day-copy">
+						<span class="vuecalendar-week__multi-day-title">{{ item.event.title }}</span>
+						<span v-if="getMultiDayEventTime(item)" class="vuecalendar-week__multi-day-time">
 							{{ getMultiDayEventTime(item) }}
 						</span>
 					</span>
 					<span
 						v-if="item.endsAfterRange"
-						class="vuecalendar-week__multi-day-edge vuecalendar-week__multi-day-edge--right ht-week__multi-day-edge ht-week__multi-day-edge--right"
+						class="vuecalendar-week__multi-day-edge vuecalendar-week__multi-day-edge--right"
 						aria-hidden="true"
 					/>
 				</button>
@@ -63,14 +61,11 @@
 
 		<div
 			ref="gridContainer"
-			class="vuecalendar-week__grid ht-week__grid"
+			class="vuecalendar-week__grid"
 			:class="{
 				'vuecalendar-week__grid--bounded': !isFullDayBoundary,
 				'vuecalendar-week__grid--static': isFullDayBoundary && !showsVerticalScroll,
 				'vuecalendar-week__grid--scrollable-bounded': !isFullDayBoundary && hasExplicitGridHeight,
-				'ht-week__grid--bounded': !isFullDayBoundary,
-				'ht-week__grid--static': isFullDayBoundary && !showsVerticalScroll,
-				'ht-week__grid--scrollable-bounded': !isFullDayBoundary && hasExplicitGridHeight,
 			}"
 			:data-boundary-start-min="boundaryStartMin"
 			:data-boundary-end-min="boundaryEndMin"
@@ -80,12 +75,12 @@
 			@mouseleave="onMouseLeave"
 			@mouseup="onMouseUp"
 		>
-			<div class="vuecalendar-week__inner ht-week__inner" :style="{ height: `${totalHeight}px` }">
-				<div class="vuecalendar-week__time-axis ht-week__time-axis" :style="{ width: `${TIME_AXIS_WIDTH}px` }">
+			<div class="vuecalendar-week__inner" :style="{ height: `${totalHeight}px` }">
+				<div class="vuecalendar-week__time-axis" :style="{ width: `${TIME_AXIS_WIDTH}px` }">
 					<div
 						v-for="(tick, index) in hourTicks"
 						:key="index"
-						class="vuecalendar-week__hour-label ht-week__hour-label"
+						class="vuecalendar-week__hour-label"
 						:style="{ top: `${tick.topPx}px` }"
 					>
 						{{ tick.label }}
@@ -95,31 +90,31 @@
 				<div
 					v-for="(day, dayIndex) in days"
 					:key="day.toString()"
-					class="vuecalendar-week__col ht-week__col"
+					class="vuecalendar-week__col"
 					:data-day="day.toString()"
 					@mousedown="onDayMouseDown($event, day, dayIndex)"
 				>
 					<div
 						v-for="(line, index) in gridLineTicks"
 						:key="index"
-						class="vuecalendar-week__grid-line ht-week__grid-line"
-						:class="{ 'vuecalendar-week__grid-line--half': line.isHalf, 'ht-week__grid-line--half': line.isHalf }"
+						class="vuecalendar-week__grid-line"
+						:class="{ 'vuecalendar-week__grid-line--half': line.isHalf }"
 						:style="{ top: `${line.topPx}px` }"
 					/>
 
 					<div
-						class="vuecalendar-week__shade ht-week__shade"
+						class="vuecalendar-week__shade"
 						:style="{ top: 0, height: `${Math.max(0, minutesToPx(workdayStart * 60))}px` }"
 					/>
 
 					<div
-						class="vuecalendar-week__shade ht-week__shade"
+						class="vuecalendar-week__shade"
 						:style="{ top: `${Math.max(0, minutesToPx(workdayEnd * 60))}px`, bottom: 0, height: 'auto' }"
 					/>
 
-					<div v-if="isWeekend(day)" class="vuecalendar-week__weekend-shade ht-week__weekend-shade" />
+					<div v-if="isWeekend(day)" class="vuecalendar-week__weekend-shade" />
 
-					<TransitionGroup name="vuecalendar-ev" tag="div" class="vuecalendar-week__events-layer ht-week__events-layer">
+					<TransitionGroup name="vuecalendar-ev" tag="div" class="vuecalendar-week__events-layer">
 						<VueCalendarEvent
 							v-for="(event, index) in getEventsForDay(day)"
 							:key="event.id"
@@ -132,7 +127,7 @@
 							:total-cols="colLayout.get(event.id)?.total ?? 1"
 							:resizable="resizingEnabled"
 							:style="{ '--i': index, opacity: isEventDimmed(event.id) ? 0.2 : 1 }"
-							class="vuecalendar-week__event ht-week__event"
+							class="vuecalendar-week__event"
 							@click="onWeekEventClick(event)"
 							@drag-start="onEventDragStart($event, event, day)"
 							@resize-start="onEventResizeStart($event, event, day)"
@@ -144,9 +139,9 @@
 						</VueCalendarEvent>
 					</TransitionGroup>
 
-					<div v-if="draw.active && draw.dayStr === day.toString()" class="vuecalendar-week__ghost ht-week__ghost" :style="ghostDrawStyle">
+					<div v-if="draw.active && draw.dayStr === day.toString()" class="vuecalendar-week__ghost" :style="ghostDrawStyle">
 						<template v-if="drawIsBlocked">
-							<svg class="vuecalendar-week__ghost-icon ht-week__ghost-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+							<svg class="vuecalendar-week__ghost-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
 								stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 								<circle cx="12" cy="12" r="10" />
 								<line x1="4.93" y1="4.93" x2="19.07" y2="19.07" />
@@ -157,17 +152,17 @@
 
 					<div
 						v-if="drag.active && drag.originalDayIndex === dayIndex"
-						class="vuecalendar-week__drag-origin ht-week__drag-origin"
+						class="vuecalendar-week__drag-origin"
 						:style="dragOriginStyle"
 					/>
 
 					<div
 						v-if="drag.active && drag.currentDayIndex === dayIndex"
-						class="vuecalendar-week__ghost ht-week__ghost"
+						class="vuecalendar-week__ghost"
 						:style="ghostDragStyle"
 					>
 						<template v-if="dragIsBlocked">
-							<svg class="vuecalendar-week__ghost-icon ht-week__ghost-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+							<svg class="vuecalendar-week__ghost-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
 								stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 								<circle cx="12" cy="12" r="10" />
 								<line x1="4.93" y1="4.93" x2="19.07" y2="19.07" />
@@ -178,26 +173,26 @@
 
 					<div
 						v-if="resize.active && resize.dayStr === day.toString()"
-						class="vuecalendar-week__ghost ht-week__ghost"
+						class="vuecalendar-week__ghost"
 						:style="ghostResizeStyle"
 					/>
 
 					<div
 						v-if="sidebarPreview.visible && sidebarPreview.dayIndex === dayIndex"
-						class="vuecalendar-week__ghost vuecalendar-week__ghost--sidebar ht-week__ghost ht-week__ghost--sidebar"
+						class="vuecalendar-week__ghost vuecalendar-week__ghost--sidebar"
 						:style="ghostSidebarStyle"
 					>
 						<template v-if="sidebarPreview.blocked">
-							<svg class="vuecalendar-week__ghost-icon ht-week__ghost-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+							<svg class="vuecalendar-week__ghost-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
 								stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 								<circle cx="12" cy="12" r="10" />
 								<line x1="4.93" y1="4.93" x2="19.07" y2="19.07" />
 							</svg>
-							<span class="vuecalendar-week__ghost-label ht-week__ghost-label">{{ blockedLabel }}</span>
+							<span class="vuecalendar-week__ghost-label">{{ blockedLabel }}</span>
 						</template>
 						<template v-else>
-							<span class="vuecalendar-week__ghost-label ht-week__ghost-label">{{ sidebarPreview.label }}</span>
-							<span class="vuecalendar-week__ghost-time ht-week__ghost-time">{{ sidebarPreview.timeRange }}</span>
+							<span class="vuecalendar-week__ghost-label">{{ sidebarPreview.label }}</span>
+							<span class="vuecalendar-week__ghost-time">{{ sidebarPreview.timeRange }}</span>
 						</template>
 					</div>
 				</div>

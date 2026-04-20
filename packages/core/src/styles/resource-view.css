@@ -1,17 +1,17 @@
-.ht-resource {
+.vuecalendar-resource {
     display: flex;
     flex: 1;
     min-height: 0;
     overflow: hidden;
 }
 
-.ht-resource__scroll-shell {
+.vuecalendar-resource__scroll-shell {
     flex: 1;
     min-width: 0;
     overflow: hidden;
 }
 
-.ht-resource__content {
+.vuecalendar-resource__content {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -19,7 +19,7 @@
     background: var(--ht-bg);
 }
 
-.ht-resource__headers {
+.vuecalendar-resource__headers {
     position: sticky;
     top: 0;
     z-index: 10;
@@ -27,17 +27,17 @@
     border-bottom: 1px solid var(--ht-border);
 }
 
-.ht-resource__day-row,
-.ht-resource__resource-row,
-.ht-resource__columns {
+.vuecalendar-resource__day-row,
+.vuecalendar-resource__resource-row,
+.vuecalendar-resource__columns {
     display: grid;
 }
 
-.ht-resource__day-row {
+.vuecalendar-resource__day-row {
     border-bottom: 1px solid var(--ht-border);
 }
 
-.ht-resource__day-header {
+.vuecalendar-resource__day-header {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -47,18 +47,18 @@
     border-left: 1px solid var(--ht-border-light);
 }
 
-.ht-resource__day-header:first-child {
+.vuecalendar-resource__day-header:first-child {
     border-left: 0;
 }
 
-.ht-resource__day-name {
+.vuecalendar-resource__day-name {
     font-size: 11px;
     color: var(--ht-text-400);
     text-transform: uppercase;
     letter-spacing: 0.04em;
 }
 
-.ht-resource__day-num {
+.vuecalendar-resource__day-num {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -72,12 +72,12 @@
     color: var(--ht-text-700);
 }
 
-.ht-resource__day-num--today {
+.vuecalendar-resource__day-num--today {
     background: var(--ht-color-primary);
     color: var(--ht-bg);
 }
 
-.ht-resource__resource-header {
+.vuecalendar-resource__resource-header {
     min-width: 0;
     padding: 8px 10px;
     border-left: 1px solid var(--ht-border-light);
@@ -92,34 +92,34 @@
     text-overflow: ellipsis;
 }
 
-.ht-resource__resource-header:first-child {
+.vuecalendar-resource__resource-header:first-child {
     border-left: 0;
 }
 
-.ht-resource__grid {
+.vuecalendar-resource__grid {
     flex: 1;
     min-height: 0;
     overflow-y: auto;
 }
 
-.ht-resource__grid--bounded {
+.vuecalendar-resource__grid--bounded {
     overflow-y: hidden;
 }
 
-.ht-resource__grid--scrollable-bounded {
+.vuecalendar-resource__grid--scrollable-bounded {
     overflow-y: auto;
 }
 
-.ht-resource__grid--static {
+.vuecalendar-resource__grid--static {
     overflow-y: hidden;
 }
 
-.ht-resource__inner {
+.vuecalendar-resource__inner {
     display: flex;
     position: relative;
 }
 
-.ht-resource__time-axis {
+.vuecalendar-resource__time-axis {
     position: sticky;
     left: 0;
     z-index: 2;
@@ -128,7 +128,7 @@
     border-right: 1px solid var(--ht-border);
 }
 
-.ht-resource__hour-label {
+.vuecalendar-resource__hour-label {
     position: absolute;
     right: 4px;
     left: 0;
@@ -138,42 +138,42 @@
     line-height: 1;
 }
 
-.ht-resource__columns {
+.vuecalendar-resource__columns {
     flex: 1;
     min-width: 0;
     width: 100%;
     position: relative;
 }
 
-.ht-resource__col {
+.vuecalendar-resource__col {
     position: relative;
     min-width: 0;
     border-left: 1px solid var(--ht-border-light);
 }
 
-.ht-resource__col--weekend {
+.vuecalendar-resource__col--weekend {
     background: rgba(59, 130, 246, 0.03);
 }
 
-.ht-resource__grid-line {
+.vuecalendar-resource__grid-line {
     position: absolute;
     inset-inline: 0;
     border-top: 1px solid var(--ht-border-light);
     pointer-events: none;
 }
 
-.ht-resource__grid-line--half {
+.vuecalendar-resource__grid-line--half {
     border-top: 1px dashed var(--ht-half-grid-color);
 }
 
-.ht-resource__shade {
+.vuecalendar-resource__shade {
     position: absolute;
     inset-inline: 0;
     background: var(--ht-off-hours-bg);
     pointer-events: none;
 }
 
-.ht-resource__weekend-shade {
+.vuecalendar-resource__weekend-shade {
     position: absolute;
     inset: 0;
     background: var(--ht-weekend-bg);
@@ -181,23 +181,23 @@
     pointer-events: none;
 }
 
-.ht-resource__events-layer {
+.vuecalendar-resource__events-layer {
     position: absolute;
     inset: 0;
     overflow: hidden;
     pointer-events: none;
 }
 
-.ht-resource__event {
+.vuecalendar-resource__event {
     pointer-events: auto;
 }
 
-.ht-resource__event .ht-event__resize-handle {
+.vuecalendar-resource__event .vuecalendar-event__resize-handle {
     display: none;
 }
 
 @media (max-width: 720px) {
-    .ht-resource__resource-header {
+    .vuecalendar-resource__resource-header {
         font-size: 11px;
         padding: 7px 8px;
     }
