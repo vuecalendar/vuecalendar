@@ -1,5 +1,13 @@
 # @vuecalendar/scroll-controller
 
+## 1.0.12
+
+### Patch Changes
+
+- Fix: added onBeforeRender
+- Updated dependencies
+  - @vuecalendar/core@1.0.12
+
 ## 1.0.11
 
 ### Patch Changes

@@ -1,6 +1,6 @@
 {
   "name": "@vuecalendar/calendar-controls",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "type": "module",
   "description": "Calendar controls plugin for @vuecalendar/core",
   "exports": {
