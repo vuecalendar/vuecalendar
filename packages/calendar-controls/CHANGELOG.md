@@ -1,5 +1,13 @@
 # @vuecalendar/calendar-controls
 
+## 1.0.13
+
+### Patch Changes
+
+- Fix: revert
+- Updated dependencies
+  - @vuecalendar/core@1.0.13
+
 ## 1.0.12
 
 ### Patch Changes

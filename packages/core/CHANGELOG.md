@@ -1,22 +1,10 @@
 # @vuecalendar/core
 
-## 1.0.12
+## 1.0.13
 
 ### Patch Changes
 
-- Fix: added onBeforeRender
-
-## 1.0.11
-
-### Patch Changes
-
-- Fix: added onBeforeRender
-
-## 1.0.10
-
-### Patch Changes
-
-- Fix: do not fire range-update on initial load
+- Fix: revert
 
 ## 1.0.9
 

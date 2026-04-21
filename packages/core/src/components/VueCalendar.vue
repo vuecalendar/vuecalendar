@@ -631,13 +631,10 @@ const forwardPluginEvent = (eventName, payload) => {
  * responses when the user navigates quickly.
  */
 let latestRangeRequestId = 0;
-const syncVisibleRange = async ({ emitRangeUpdate = true } = {}) => {
+const syncVisibleRange = async () => {
 	const range = getRange();
-
-	if (emitRangeUpdate) {
-		emit('range-update', range);
-		pluginBus.emit('range-update', range);
-	}
+	emit('range-update', range);
+	pluginBus.emit('range-update', range);
 
 	if (!props.fetchEvents) {
 		return;
@@ -653,8 +650,7 @@ const syncVisibleRange = async ({ emitRangeUpdate = true } = {}) => {
 	setEvents(events);
 };
 
-syncVisibleRange({ emitRangeUpdate: false });
-watch([currentDate, currentView], () => syncVisibleRange());
+watch([currentDate, currentView], syncVisibleRange, { immediate: true });
 
 const calendarApi = {
 	setDate,
