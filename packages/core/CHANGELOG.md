@@ -1,6 +1,18 @@
 # @vuecalendar/core
 
-## 1.0.13
+## 1.0.15
+
+### Patch Changes
+
+- Fix: added start, end date to event modal on draw and drag
+
+## 1.0.11
+
+### Patch Changes
+
+- Fix: added start, end date to event modal on draw and drag
+
+## 1.0.10
 
 ### Patch Changes
 

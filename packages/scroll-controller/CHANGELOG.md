@@ -1,12 +1,28 @@
 # @vuecalendar/scroll-controller
 
+## 1.0.15
+
+### Patch Changes
+
+- Fix: added start, end date to event modal on draw and drag
+- Updated dependencies
+  - @vuecalendar/core@1.0.15
+
+## 1.0.14
+
+### Patch Changes
+
+- Fix: added start, end date to event modal on draw and drag
+- Updated dependencies
+  - @vuecalendar/core@1.0.11
+
 ## 1.0.13
 
 ### Patch Changes
 
 - Fix: revert
 - Updated dependencies
-  - @vuecalendar/core@1.0.13
+  - @vuecalendar/core@1.0.10
 
 ## 1.0.12
 
